@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - VetAscend</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <main class="tela-cadastro">
+        <section class="card-cadastro">
+            <h1>Crie sua conta</h1>
+            <p>Comece sua jornada no VetAscend!</p>
+            <input class="campo-nome"type="text"
+            placeholder="Nome">
+            <input class="campo-email-cadastro"type="email"
+            placeholder="E-mail">
+            <input class="campo-senha-cadastro"type="password"
+            placeholder="Senha">
+            <input class="campo-confirmar-senha"type="password"
+            placeholder="Confirmar Senha">
+            <p class="titulo-perfil">Qual perfil combina mais com você? </p>
+            <select class="campo-perfil">
+                <option value="">Selecione seu perfil</option>
+                <option value="Estudante">Estudante de Veterinária</option>
+                <option value="profissional">Profissional da área da Veterinária</option>
+                <option value="amante-animais">Amante dos Animais</option>
+            </select>
+            <p class="mensagem-erro-cadastro"></p>
+            <button class="botao-finalizar-cadastro">Criar minha conta</button> 
+            <a href="index.html">Já tenho uma conta</a>
+        </section>
+    </main>  
+    
+    <script src="cadastro.js"></script>          
+</body>
+</html>
