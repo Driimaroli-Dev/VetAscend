@@ -1,0 +1,6171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <!-- =========================================================
+         CONFIGURAÇÕES BÁSICAS DA PÁGINA
+    ========================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Centro de Administração do VetAscend">
+
+    <meta
+        name="author"
+        content="VetAscend">
+
+    <title>Centro de Administração | VetAscend</title>
+
+
+    <!-- =========================================================
+         ARQUIVO DE ESTILOS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="styleAdmin.css">
+
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         APLICAÇÃO ADMINISTRATIVA
+    ========================================================== -->
+
+    <div
+        id="app-admin"
+        class="app-admin">
+
+
+        <!-- =====================================================
+             FUNDO ESCURO DO MENU EM TELAS PEQUENAS
+        ====================================================== -->
+
+        <button
+            id="fundo-menu-mobile"
+            class="fundo-menu-mobile"
+            type="button"
+            aria-label="Fechar menu lateral">
+        </button>
+
+
+        <!-- =====================================================
+             BARRA LATERAL
+        ====================================================== -->
+
+        <aside
+            id="barra-lateral"
+            class="barra-lateral"
+            aria-label="Menu administrativo">
+
+
+            <!-- =================================================
+                 IDENTIDADE DO VETASCEND
+            ================================================== -->
+
+            <div class="marca-admin">
+
+                <div
+                    class="marca-admin__icone"
+                    aria-hidden="true"
+                >
+                    🐾
+                </div>
+
+
+                <div class="marca-admin__texto">
+
+                    <strong>
+                        VetAscend
+                    </strong>
+
+                    <span>
+                        Centro de Administração
+                    </span>
+
+                </div>
+
+
+                <button
+                    id="botao-fechar-menu-mobile"
+                    class="botao-icone botao-fechar-menu-mobile"
+                    type="button"
+                    aria-label="Fechar menu lateral"
+                >
+                    ✕
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 NAVEGAÇÃO PRINCIPAL
+            ================================================== -->
+
+            <nav
+                id="menu-admin"
+                class="menu-admin">
+
+
+                <!-- =============================================
+                     GRUPO: VISÃO GERAL
+                ============================================== -->
+
+                <div class="grupo-menu">
+
+                    <span class="grupo-menu__titulo">Visão geral</span>
+
+
+                    <button
+                        class="item-menu ativo"
+                        type="button"
+                        data-secao="dashboard"
+                    >
+
+                        <span
+                            class="item-menu__icone"
+                            aria-hidden="true"
+                        >
+                            🏠
+                        </span>
+
+                        <span class="item-menu__texto">
+                            Dashboard
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =============================================
+                     GRUPO: CLÍNICA E SIMULAÇÃO
+                ============================================== -->
+
+                <div class="grupo-menu">
+
+                    <span class="grupo-menu__titulo">Clínica e simulação</span>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="doencas"
+                    >
+
+                        <span
+                            class="item-menu__icone"
+                            aria-hidden="true"
+                        >
+                            🦠
+                        </span>
+
+                        <span class="item-menu__texto">
+                            Banco de Doenças
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="casos"
+                    >
+
+                        <span
+                            class="item-menu__icone"
+                            aria-hidden="true"
+                        >
+                            📋
+                        </span>
+
+                        <span class="item-menu__texto">
+                            Casos Clínicos
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="exames"
+                    >
+
+                        <span
+                            class="item-menu__icone"
+                            aria-hidden="true"
+                        >
+                            🧪
+                        </span>
+
+                        <span class="item-menu__texto">
+                            Exames
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="protocolos"
+                    >
+
+                        <span
+                            class="item-menu__icone"
+                            aria-hidden="true"
+                        >
+                            🗂️
+                        </span>
+
+                        <span class="item-menu__texto">
+                            Protocolos
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="plantoes"
+                    >
+
+                        <span
+                            class="item-menu__icone"
+                            aria-hidden="true"
+                        >
+                            🎲
+                        </span>
+
+                        <span class="item-menu__texto">
+                            Gerador de Plantões
+                        </span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =============================================
+                     GRUPO: ESTUDOS E FERRAMENTAS
+                ============================================== -->
+
+                <div class="grupo-menu">
+
+                    <span class="grupo-menu__titulo">Estudos e ferramentas</span>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="farmacos">
+
+                        <span class="item-menu__icone"aria-hidden="true">💊</span>
+
+                        <span class="item-menu__texto">Fármaco</span>
+
+                    </button>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="biblioteca">
+
+                        <span class="item-menu__icone"aria-hidden="true">📚</span>
+
+                        <span class="item-menu__texto">Biblioteca</span>
+
+                    </button>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="questoes">
+
+                        <span class="item-menu__icone"aria-hidden="true">❓</span>
+
+                        <span class="item-menu__texto">Questões e Simulados</span>
+
+                    </button>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="flashcards">
+
+                        <span class="item-menu__icone"aria-hidden="true">🗃️</span>
+
+                        <span class="item-menu__texto">Flashcards</span>
+
+                    </button>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="referencias">
+
+                        <span class="item-menu__icone"aria-hidden="true">📊</span>
+
+                        <span class="item-menu__texto">Tabelas de Referência</span>
+
+                    </button>
+
+                </div>
+
+
+                <!-- =============================================
+                     GRUPO: ADMINISTRAÇÃO
+                ============================================== -->
+
+                <div class="grupo-menu">
+
+                    <span class="grupo-menu__titulo">
+                        Administração
+                    </span>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="usuarios"
+                    >
+
+                        <span
+                            class="item-menu__icone"
+                            aria-hidden="true"
+                        >
+                            👥
+                        </span>
+
+                        <span class="item-menu__texto">
+                            Usuários e Acessos
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="item-menu"
+                        type="button"
+                        data-secao="configuracoes"
+                    >
+
+                        <span
+                            class="item-menu__icone"
+                            aria-hidden="true"
+                        >
+                            ⚙️
+                        </span>
+
+                        <span class="item-menu__texto">
+                            Configurações
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </nav>
+
+
+            <!-- =================================================
+                 AVISO DE ACESSO RESTRITO
+            ================================================== -->
+
+            <div class="area-restrita">
+
+                <span
+                    class="area-restrita__icone"
+                    aria-hidden="true"
+                >
+                    🛡️
+                </span>
+
+
+                <div class="area-restrita__conteudo">
+
+                    <strong>
+                        Área restrita
+                    </strong>
+
+                    <p>
+                        Acesso exclusivo da administradora do VetAscend.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+
+                <!-- =====================================================
+             CONTEÚDO PRINCIPAL
+        ====================================================== -->
+
+        <main
+            id="conteudo-admin"
+            class="conteudo-admin"
+        >
+
+            <!-- ================================================
+                 CABEÇALHO
+            ================================================= -->
+
+            <header
+                id="cabecalho-admin"
+                class="cabecalho-admin"
+            >
+
+                <!-- LADO ESQUERDO -->
+
+                <div class="cabecalho-esquerdo">
+
+                    <button
+                        id="botao-menu-mobile"
+                        class="botao-menu-mobile"
+                        type="button"
+                    >
+                        ☰
+                    </button>
+
+
+                    <div class="titulo-pagina">
+
+                        <span
+                            id="caminho-pagina"
+                            class="caminho-pagina"
+                        >
+                            Centro de Administração
+                        </span>
+
+                        <h1
+                            id="titulo-pagina-admin"
+                        >
+                            Dashboard
+                        </h1>
+
+                        <p
+                            id="descricao-pagina-admin"
+                        >
+                            Gerencie todo o ecossistema do VetAscend.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LADO DIREITO -->
+
+                <div class="cabecalho-direito">
+
+
+                    <!-- PESQUISA -->
+
+                    <div class="pesquisa-global">
+
+                        <span>
+                            🔎
+                        </span>
+
+                        <input
+                            id="pesquisa-global"
+                            type="search"
+                            placeholder="Pesquisar..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+                    <!-- NOTIFICAÇÕES -->
+
+                    <button
+                        id="botao-notificacoes"
+                        class="botao-cabecalho"
+                        type="button"
+                    >
+
+                        🔔
+
+                        <span
+                            id="contador-notificacoes"
+                            class="contador"
+                        >
+                            0
+                        </span>
+
+                    </button>
+
+
+                    <!-- AJUDA -->
+
+                    <button
+                        id="botao-ajuda"
+                        class="botao-cabecalho"
+                        type="button"
+                    >
+
+                        ❓
+
+                    </button>
+
+
+                    <!-- PERFIL -->
+
+                    <div class="perfil-admin">
+
+                        <div class="avatar-admin">
+
+                            👩🏻‍⚕️
+
+                        </div>
+
+                        <div class="dados-admin">
+
+                            <strong>
+
+                                Administradora
+
+                            </strong>
+
+                            <span>
+
+                                Controle Total
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================================================
+                 DASHBOARD
+            ================================================= -->
+
+            <section
+                id="tela-dashboard"
+                class="tela-admin ativa">
+
+
+                <!-- TOPO -->
+
+                <section class="banner-dashboard">
+
+                    <div class="banner-texto">
+
+                        <span class="badge-roxo">CENTRO DE CONTROLE</span>
+
+
+                        <h2>Bem-vinda ao Centro Administrativo do VetAscend 👋</h2>
+
+
+                        <p>
+
+                            Toda a criação do aplicativo será controlada por aqui.
+                            Cadastre doenças, casos, exames, conteúdos,
+                            usuários, simulações e acompanhe o crescimento do projeto.
+
+                        </p>
+
+
+                        <div class="acoes-banner">
+
+                            <button
+                                class="botao-primario"
+                                type="button">
+
+                                + Nova Doença
+
+                            </button>
+
+
+                            <button
+                                class="botao-secundario"
+                                type="button">
+
+                                🎲 Gerar Plantão
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="banner-ilustracao">
+
+                        🐶 🐱 🐰 🦜
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ============================================
+                     CARDS DE ESTATÍSTICAS
+                ============================================= -->
+
+                <section class="grade-estatisticas">
+
+
+                    <article class="card-estatistica">
+
+                        <div class="icone-card">🦠</div>
+
+                        <h3>Doenças</h3>
+
+                        <strong id="total-doencas">0</strong>
+
+                        <span>cadastradas</span>
+
+                    </article>
+
+
+
+                    <article class="card-estatistica">
+
+                        <div class="icone-card">📋</div>
+
+                        <h3>Casos Clínicos</h3>
+
+                        <strong id="total-casos">0</strong>
+
+                        <span>cadastrados</span>
+
+                    </article>
+
+
+
+                    <article class="card-estatistica">
+
+                        <div class="icone-card">🧪</div>
+
+                        <h3>Exames</h3>
+
+                        <strong id="total-exames">0</strong>
+
+                        <span>cadastrados</span>
+
+                    </article>
+
+
+                    <article class="card-estatistica">
+
+                        <div class="icone-card">💊</div>
+
+                        <h3>Fármacos</h3>
+
+                        <strong id="total-farmacos">0</strong>
+
+                        <span>cadastrados</span>
+
+                    </article>
+
+
+
+                    <article class="card-estatistica">
+
+                        <div class="icone-card">📚</div>
+
+                        <h3>Biblioteca</h3>
+
+                        <strong id="total-conteudos">0</strong>
+
+                        <span>conteúdos</span>
+
+                    </article>
+
+
+
+                    <article class="card-estatistica">
+
+                        <div class="icone-card">👥</div>
+
+                        <h3>Usuários</h3>
+
+                        <strong id="total-usuarios">0</strong>
+
+                        <span>registrados</span>
+
+                    </article>
+
+                </section>
+
+                            <!-- ================================================
+                 PAINÉIS PRINCIPAIS DO DASHBOARD
+            ================================================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- ============================================
+                     ACESSO RÁPIDO
+                ============================================= -->
+
+                <section class="painel">
+
+                    <div class="cabecalho-painel">
+
+                        <div>
+
+                            <span class="subtitulo-painel">ACESSO RÁPIDO</span>
+
+                            <h2>Criar novo conteúdo</h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="grade-atalhos">
+
+                        <button class="atalho-admin" data-atalho="doencas">
+
+                            <span class="atalho-icone">🦠</span>
+
+                            <strong>Nova Doença</strong>
+
+                            <small>Banco de doenças</small>
+
+                        </button>
+
+
+                        <button class="atalho-admin" data-atalho="casos">
+
+                            <span class="atalho-icone">📋</span>
+
+                            <strong>Novo Caso</strong>
+
+                            <small>Simulação clínica</small>
+
+                        </button>
+
+
+                        <button class="atalho-admin" data-atalho="exames">
+
+                            <span class="atalho-icone">🧪</span>
+
+                            <strong>Novo Exame</strong>
+
+                            <small>Laboratório</small>
+
+                        </button>
+
+
+                        <button class="atalho-admin" data-atalho="farmacos">
+
+                            <span class="atalho-icone">💊</span>
+
+                            <strong>Novo Fármaco</strong>
+
+                            <small>Farmácia</small>
+
+                        </button>
+
+
+                        <button class="atalho-admin" data-atalho="biblioteca">
+
+                            <span class="atalho-icone">📚</span>
+
+                            <strong>Biblioteca</strong>
+
+                            <small>Conteúdo</small>
+
+                        </button>
+
+
+                        <button class="atalho-admin" data-atalho="plantoes">
+
+                            <span class="atalho-icone">🎲</span>
+
+                            <strong>Plantão</strong>
+
+                            <small>Gerar Simulação</small>
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- ============================================
+                     DRA HELENA
+                ============================================= -->
+
+                <aside class="painel painel-helena">
+
+                    <div class="helena-avatar">
+
+                        👩🏻‍⚕️
+
+                    </div>
+
+                    <span class="subtitulo-painel">
+
+                        DRA. HELENA
+
+                    </span>
+
+                    <h2>
+
+                        Recomendação
+
+                    </h2>
+
+                    <p>
+
+                        Antes de criar novos casos clínicos,
+                        procure cadastrar todas as doenças,
+                        exames e tratamentos relacionados.
+                        Assim o gerador automático produzirá
+                        pacientes muito mais inteligentes.
+
+                    </p>
+
+                    <button class="botao-secundario">
+
+                        Abrir Banco de Doenças
+
+                    </button>
+
+                </aside>
+
+            </section>
+
+
+
+            <!-- ================================================
+                 LINHA INFERIOR
+            ================================================= -->
+
+            <section class="dashboard-grid">
+
+
+
+                <!-- ============================================
+                     ATIVIDADES RECENTES
+                ============================================= -->
+
+                <section class="painel">
+
+                    <div class="cabecalho-painel">
+
+                        <div>
+
+                            <span class="subtitulo-painel">
+
+                                HISTÓRICO
+
+                            </span>
+
+                            <h2>
+
+                                Atividades Recentes
+
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="lista-atividades">
+
+                        <article class="atividade">
+
+                            <div class="atividade-icone">
+
+                                🦠
+
+                            </div>
+
+                            <div class="atividade-texto">
+
+                                <strong>
+
+                                    Piometra cadastrada
+
+                                </strong>
+
+                                <span>
+
+                                    Hoje às 09:45
+
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article class="atividade">
+
+                            <div class="atividade-icone">
+
+                                📋
+
+                            </div>
+
+                            <div class="atividade-texto">
+
+                                <strong>
+
+                                    Caso de Corpo Estranho atualizado
+
+                                </strong>
+
+                                <span>
+
+                                    Ontem
+
+                                </span>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article class="atividade">
+
+                            <div class="atividade-icone">
+
+                                💊
+
+                            </div>
+
+                            <div class="atividade-texto">
+
+                                <strong>
+
+                                    Maropitant adicionado
+
+                                </strong>
+
+                                <span>
+
+                                    Ontem
+
+                                </span>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </section>
+
+
+
+
+                <!-- ============================================
+                     CHECKLIST
+                ============================================= -->
+
+                <aside class="painel">
+
+                    <div class="cabecalho-painel">
+
+                        <div>
+
+                            <span class="subtitulo-painel">
+
+                                PROGRESSO
+
+                            </span>
+
+                            <h2>
+
+                                Checklist
+
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="check-admin">
+
+                        <input type="checkbox">
+
+                        Banco de doenças iniciado
+
+                    </label>
+
+
+
+                    <label class="check-admin">
+
+                        <input type="checkbox">
+
+                        Casos clínicos cadastrados
+
+                    </label>
+
+
+
+                    <label class="check-admin">
+
+                        <input type="checkbox">
+
+                        Exames cadastrados
+
+                    </label>
+
+
+
+                    <label class="check-admin">
+
+                        <input type="checkbox">
+
+                        Biblioteca organizada
+
+                    </label>
+
+
+
+                    <label class="check-admin">
+
+                        <input type="checkbox">
+
+                        Farmácia completa
+
+                    </label>
+
+
+
+                    <label class="check-admin">
+
+                        <input type="checkbox">
+
+                        Plantões configurados
+
+                    </label>
+
+                </aside>
+
+            </section>
+
+
+
+            <!-- ================================================
+                 FIM DO DASHBOARD
+            ================================================= -->
+
+            </section>
+
+                    <!-- =====================================================
+             BANCO DE DOENÇAS
+        ====================================================== -->
+
+        <section
+        id="tela-doencas"
+        class="tela-admin"
+    >
+
+        <!-- ================================================
+             CABEÇALHO DA TELA
+        ================================================= -->
+
+        <div class="topo-tela">
+
+            <div>
+
+                <span class="subtitulo-painel">
+
+                    CLÍNICA E SIMULAÇÃO
+
+                </span>
+
+                <h2>Visão Geral</h2>
+
+                <p>
+
+                    Cadastre todas as doenças utilizadas pelo
+                    VetAscend para gerar pacientes, casos clínicos,
+                    plantões e conteúdos da biblioteca.
+
+                </p>
+
+            </div>
+
+
+            <button
+                id="botao-nova-doenca"
+                class="botao-primario"
+                type="button">
+
+                ＋ Nova Doença
+
+            </button>
+
+        </div>
+
+
+
+        <!-- ================================================
+             CARDS SUPERIORES
+        ================================================= -->
+
+        <section class="grade-estatisticas">
+
+            <article class="card-estatistica">
+
+                <div class="icone-card">🦠
+
+                </div>
+
+                <h3>Total</h3>
+
+                <strong id="quantidade-doencas">0</strong>
+
+                <span>doenças cadastradas</span>
+
+            </article>
+
+
+
+            <article class="card-estatistica">
+
+                <div class="icone-card">✅</div>
+
+                <h3>Ativas</h3>
+
+                <strong id="doencas-ativas">0</strong>
+
+                <span>prontas para uso</span>
+
+            </article>
+
+
+
+            <article class="card-estatistica">
+
+                <div class="icone-card">✏️</div>
+
+                <h3>Rascunhos</h3>
+
+                <strong id="doencas-rascunho">0</strong>
+
+                <span>Em desenvolvimento</span>
+
+            </article>
+
+
+
+            <article class="card-estatistica">
+
+                <div class="icone-card">🔗</div>
+
+                <h3>Casos vinculados</h3>
+
+                <strong id="casos-vinculados">0</strong>
+
+                <span>utilizando doenças</span>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- ================================================
+             PAINEL PRINCIPAL
+        ================================================= -->
+
+        <section class="painel">
+
+            <div class="cabecalho-painel">
+
+                <div>
+
+                    <span class="subtitulo-painel">GERENCIAMENTO</span>
+
+                    <h2>Lista de Doenças</h2>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ============================================
+                 BARRA DE PESQUISA
+            ============================================= -->
+
+            <div class="barra-ferramentas">
+
+                <input
+                    id="pesquisa-doenca"
+                    type="search"
+                    placeholder="Pesquisar doença...">
+
+
+
+                <select id="filtro-especie">
+
+                    <option value="">Todas as espécies</option>
+
+                    <option>Canina</option>
+
+                    <option>Felina</option>
+
+                    <option>Equina</option>
+
+                    <option>Silvestres e Exóticos</option>
+
+                    <option>Bovinas</option>
+
+                </select>
+
+
+
+                <select id="filtro-sistema">
+
+                    <option value="">Todos os sistemas</option>
+
+                    <option>Digestório</option>
+
+                    <option>Respiratório</option>
+
+                    <option>Cardiovascular</option>
+
+                    <option>Neurológico</option>
+
+                    <option>Reprodutivo</option>
+
+                    <option>Urinário</option>
+
+                    <option>Endócrino</option>
+
+                </select>
+
+
+
+                <select id="filtro-dificuldade">
+
+                    <option value="">Todas as dificuldades</option>
+
+                    <option>Fácil</option>
+
+                    <option>Intermediária</option>
+
+                    <option>Difícil</option>
+
+                </select>
+
+
+
+                <select id="filtro-status">
+
+                    <option value="">Todos os status</option>
+
+                    <option>Ativa</option>
+
+                    <option>Rascunho</option>
+
+                    <option>Arquivada</option>
+
+                </select>
+
+            </div>
+
+                            <!-- ============================================
+                     TABELA DE DOENÇAS
+                ============================================= -->
+
+                <div class="tabela-responsiva">
+
+                    <table class="tabela-admin">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Doença</th>
+
+                                <th>Espécie</th>
+
+                                <th>Sistema</th>
+
+                                <th>Dificuldade</th>
+
+                                <th>Casos</th>
+
+                                <th>Status</th>
+
+                                <th>Atualização</th>
+
+                                <th>Ações</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="lista-doencas">
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+                <!-- ============================================
+                     PAGINAÇÃO
+                ============================================= -->
+
+                <div class="rodape-tabela">
+
+                    <span>Mostrando 3 de 3 doenças</span>
+
+                    <div class="paginacao">
+
+                        <button>←</button>
+
+                        <button class="ativo">1</button>
+
+                        <button>→</button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <!-- ======================================================
+     CASOS CLÍNICOS
+====================================================== -->
+
+<section id="tela-casos" class="tela-admin">
+
+    <!-- ==================================================
+         CABEÇALHO DA TELA
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">CLÍNICA E SIMULAÇÃO</span>
+            <h2>Visão geral</h2>
+            <p>Crie e organize os casos utilizados nas simulações do VetAscend.</p>
+        </div>
+
+        <button id="botao-novo-caso" class="botao-primario" type="button">＋ Novo Caso</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS SUPERIORES
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">▣</div>
+
+            <h3>Total</h3>
+
+            <strong id="quantidade-casos">0</strong>
+
+            <span>casos cadastrados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Ativos</h3>
+
+            <strong id="casos-ativos">0</strong>
+
+            <span>prontos para uso</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">—</div>
+
+            <h3>Rascunhos</h3>
+
+            <strong id="casos-rascunho">0</strong>
+
+            <span>Em desenvolvimento</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">⌁</div>
+
+            <h3>Finalizados</h3>
+
+            <strong id="casos-finalizados">0</strong>
+
+            <span>casos concluídos</span>
+
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL PRINCIPAL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Lista de Casos Clínicos</h2>
+            </div>
+        </div>
+
+        <!-- ==============================================
+             BARRA DE PESQUISA
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+            <input id="pesquisa-caso" type="search" placeholder="Pesquisar caso...">
+
+            <select id="filtro-especie-caso">
+
+                <option value="">Todas as espécies</option>
+
+                <option value="Canina">Canina</option>
+
+                <option value="Felina">Felina</option>
+
+                <option value="Equina">Equina</option>
+
+                <option value="Silvestres e Exóticos">Silvestres e Exóticos</option>
+
+            </select>
+
+            <select id="filtro-dificuldade-caso">
+
+                <option value="">Todas as dificuldades</option>
+
+                <option value="Fácil">Fácil</option>
+
+                <option value="Intermediária">Intermediária</option>
+
+                <option value="Difícil">Difícil</option>
+
+            </select>
+
+            <select id="filtro-status-caso">
+
+                <option value="">Todos os status</option>
+
+                <option value="Ativo">Ativo</option>
+
+                <option value="Rascunho">Rascunho</option>
+
+                <option value="Arquivado">Arquivado</option>
+
+            </select>
+        </div>
+
+        <!-- ==============================================
+             TABELA DE CASOS
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+
+            <table class="tabela-admin">
+
+                <thead>
+                    <tr>
+                        <th>Caso</th>
+                        <th>Espécie</th>
+                        <th>Doença principal</th>
+                        <th>Dificuldade</th>
+                        <th>Status</th>
+                        <th>Atualização</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="lista-casos">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+            <span>Mostrando 0 de 0 casos</span>
+
+            <div class="paginacao">
+                <button type="button">←</button>
+                <button class="ativo" type="button">1</button>
+                <button type="button">→</button>
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     EXAMES
+====================================================== -->
+
+<section id="tela-exames" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">CLÍNICA E SIMULAÇÃO</span>
+            <h2>Visão Geral</h2>
+            <p>Organize os exames laboratoriais, de imagem e complementares utilizados nas simulações.</p>
+        </div>
+
+        <button id="botao-novo-exame" class="botao-primario" type="button">＋ Novo Exame</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS SUPERIORES
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">▣</div>
+
+            <h3>Total</h3>
+
+            <strong id="quantidade-exames">0</strong>
+
+            <span>exames cadastrados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">⌁</div>
+
+            <h3>Laboratoriais</h3>
+
+            <strong id="exames-laboratoriais">0</strong>
+
+            <span>exames disponíveis</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">◫</div>
+
+            <h3>Imagem</h3>
+
+            <strong id="exames-imagem">0</strong>
+
+            <span>exames disponíveis</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Ativos</h3>
+
+            <strong id="exames-ativos">0</strong>
+
+            <span>prontos para uso</span>
+
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL PRINCIPAL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Lista de Exames</h2>
+            </div>
+        </div>
+
+        <!-- ==============================================
+             PESQUISA E FILTROS
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+
+            <input id="pesquisa-exame" type="search" placeholder="Pesquisar exame...">
+
+            <select id="filtro-tipo-exame">
+
+                <option value="">Todos os tipos</option>
+
+                <option value="Laboratorial">Laboratorial</option>
+
+                <option value="Imagem">Imagem</option>
+
+                <option value="Cardiológico">Cardiológico</option>
+
+                <option value="Citológico">Citológico</option>
+
+                <option value="Outros">Outros</option>
+
+            </select>
+
+            <select id="filtro-area-exame">
+
+                <option value="">Todas as áreas</option>
+
+                <option value="Hematologia">Hematologia</option>
+
+                <option value="Bioquímica">Bioquímica</option>
+
+                <option value="Urinálise">Urinálise</option>
+
+                <option value="Radiologia">Radiologia</option>
+
+                <option value="Ultrassonografia">Ultrassonografia</option>
+            </select>
+
+            <select id="filtro-status-exame">
+
+                <option value="">Todos os status</option>
+
+                <option value="Ativo">Ativo</option>
+
+                <option value="Rascunho">Rascunho</option>
+
+                <option value="Arquivado">Arquivado</option>
+
+            </select>
+
+        </div>
+
+        <!-- ==============================================
+             TABELA DE EXAMES
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+
+            <table class="tabela-admin">
+
+                <thead>
+                    <tr>
+                        <th>Exame</th>
+                        <th>Tipo</th>
+                        <th>Área</th>
+                        <th>Espécies</th>
+                        <th>Casos</th>
+                        <th>Status</th>
+                        <th>Atualização</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpo-tabela-exames">
+                    <tr>
+                        <td colspan="8">Nenhum exame cadastrado.</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+
+            <span>Mostrando 0 de 0 exames</span>
+
+            <div class="paginacao">
+
+                <button type="button">←</button>
+
+                <button class="ativo" type="button">1</button>
+
+                <button type="button">→</button>
+
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     PROTOCOLOS
+====================================================== -->
+
+<section id="tela-protocolos" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">CLÍNICA E SIMULAÇÃO</span>
+            <h2>Protocolos</h2>
+            <p>Gerencie todos os protocolos clínicos utilizados pelo VetAscend.</p>
+        </div>
+
+        <button id="botao-novo-protocolo" class="botao-primario" type="button">＋ Novo Protocolo</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">📚</div>
+
+            <h3>Total</h3>
+
+            <strong id="quantidade-protocolos">0</strong>
+
+            <span>protocolos cadastrados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Ativos</h3>
+
+            <strong id="protocolos-ativos">0</strong>
+
+            <span>disponíveis</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">⏳</div>
+
+            <h3>Rascunhos</h3>
+
+            <strong id="protocolos-rascunho">0</strong>
+
+            <span>em edição</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">🔗</div>
+
+            <h3>Casos</h3>
+
+            <strong id="casos-protocolos">0</strong>
+
+            <span>utilizando protocolos</span>
+
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Lista de Protocolos</h2>
+            </div>
+        </div>
+
+        <!-- ==============================================
+             PESQUISA
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+
+            <input id="pesquisa-protocolo" type="search" placeholder="Pesquisar protocolo...">
+
+            <select id="filtro-categoria-protocolo">
+
+                <option>Todas as categorias</option>
+
+                <option>Emergência</option>
+
+                <option>Anestesia</option>
+
+                <option>Internação</option>
+
+                <option>Fluidoterapia</option>
+
+                <option>Vacinação</option>
+
+                <option>Procedimentos</option>
+
+            </select>
+
+            <select id="filtro-especie-protocolo">
+
+                <option>Todas as espécies</option>
+                <option>Canina</option>
+                <option>Felina</option>
+                <option>Equina</option>
+                <option>Bovina</option>
+                <option>Silvestres e Exóticos</option>
+            </select>
+
+            <select id="filtro-status-protocolo">
+
+                <option>Todos os status</option>
+
+                <option>Ativo</option>
+
+                <option>Rascunho</option>
+
+                <option>Arquivado</option>
+
+            </select>
+
+        </div>
+
+        <!-- ==============================================
+             TABELA
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+
+            <table class="tabela-admin">
+
+                <thead>
+                    <tr>
+                        <th>Protocolo</th>
+                        <th>Categoria</th>
+                        <th>Espécies</th>
+                        <th>Casos</th>
+                        <th>Status</th>
+                        <th>Atualização</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpo-tabela-protocolos">
+                    <tr>
+                        <td colspan="7">Nenhum protocolo cadastrado.</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+
+            <span>Mostrando 0 de 0 protocolos</span>
+
+            <div class="paginacao">
+
+                <button type="button">←</button>
+
+                <button class="ativo" type="button">1</button>
+
+                <button type="button">→</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     GERADOR DE PLANTÕES
+====================================================== -->
+
+<section id="tela-plantoes" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">CLÍNICA E SIMULAÇÃO</span>
+            <h2>Visão Geral</h2>
+            <p>Configure e gere os plantões utilizados nas simulações da clínica veterinária.</p>
+        </div>
+
+        <button id="botao-novo-plantao" class="botao-primario" type="button">＋ Novo Plantão</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS SUPERIORES
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">▣</div>
+
+            <h3>Total</h3>
+
+            <strong id="quantidade-plantoes">0</strong>
+
+            <span>plantões gerados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">◷</div>
+
+            <h3>Plantão Atual</h3>
+
+            <strong id="pacientes-plantao-atual">0</strong>
+
+            <span>pacientes aguardando</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">!</div>
+
+            <h3>Emergências</h3>
+
+            <strong id="emergencias-plantao">0</strong>
+
+            <span>casos emergenciais</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Finalizados</h3>
+
+            <strong id="plantoes-finalizados">0</strong>
+
+            <span>plantões concluídos</span>
+
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL PRINCIPAL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Plantões Gerados</h2>
+            </div>
+        </div>
+
+        <!-- ==============================================
+             PESQUISA E FILTROS
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+            <input id="pesquisa-plantao" type="search" placeholder="Pesquisar plantão...">
+
+            <select id="filtro-status-plantao">
+
+                <option value="">Todos os status</option>
+
+                <option value="Atual">Atual</option>
+
+                <option value="Finalizado">Finalizado</option>
+
+                <option value="Arquivado">Arquivado</option>
+
+            </select>
+
+            <select id="filtro-tipo-plantao">
+
+                <option value="">Todos os tipos</option>
+
+                <option value="Normal">Normal</option>
+
+                <option value="Movimentado">Movimentado</option>
+
+                <option value="Emergência">Emergência</option>
+
+            </select>
+        </div>
+
+        <!-- ==============================================
+             TABELA DE PLANTÕES
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+
+            <table class="tabela-admin">
+
+                <thead>
+                    <tr>
+                        <th>Plantão</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Pacientes</th>
+                        <th>Emergências</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpo-tabela-plantoes">
+                    <tr>
+                        <td colspan="7">Nenhum plantão gerado.</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+            <span>Mostrando 0 de 0 plantões</span>
+
+            <div class="paginacao">
+                <button type="button">←</button>
+                <button class="ativo" type="button">1</button>
+                <button type="button">→</button>
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     FÁRMACOS
+====================================================== -->
+
+<section id="tela-farmacos" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">ESTUDOS E FERRAMENTAS</span>
+            <h2>Visão Geral</h2>
+            <p>Gerencie os medicamentos, apresentações, doses, indicações e restrições utilizados pelo VetAscend.</p>
+        </div>
+
+        <button id="botao-novo-farmaco" class="botao-primario" type="button">＋ Novo Fármaco</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">▣</div>
+
+            <h3>Total</h3>
+
+            <strong id="quantidade-farmacos">0</strong>
+
+            <span>fármacos cadastrados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Ativos</h3>
+
+            <strong id="farmacos-ativos">0</strong>
+
+            <span>disponíveis para uso</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">⌁</div>
+
+            <h3>Classes</h3>
+
+            <strong id="classes-farmacos">0</strong>
+
+            <span>classes farmacológicas</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">!</div>
+
+            <h3>Controlados</h3>
+
+            <strong id="farmacos-controlados">0</strong>
+
+            <span>medicamentos controlados</span>
+
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL PRINCIPAL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Lista de Fármacos</h2>
+            </div>
+        </div>
+
+        <!-- ==============================================
+             PESQUISA E FILTROS
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+            <input id="pesquisa-farmaco" type="search" placeholder="Pesquisar fármaco...">
+
+            <select id="filtro-classe-farmaco">
+                <option value="">Todas as classes</option>
+                <option value="Antibiótico">Antibiótico</option>
+                <option value="Analgésico">Analgésico</option>
+                <option value="Anti-inflamatório">Anti-inflamatório</option>
+                <option value="Anestésico">Anestésico</option>
+                <option value="Antiparasitário">Antiparasitário</option>
+                <option value="Sedativo">Sedativo</option>
+            </select>
+
+            <select id="filtro-especie-farmaco">
+                
+                <option value="">Todas as espécies</option>
+                <option value="Canina">Canina</option>
+                <option value="Felina">Felina</option>
+                <option value="Equina">Equina</option>
+                <option value="Bovina">Bovina</option>
+                <option value="Silvestres e Exóticos">Silvestres e Exóticos</option>
+            </select>
+
+            <select id="filtro-status-farmaco">
+
+                <option value="">Todos os status</option>
+
+                <option value="Ativo">Ativo</option>
+
+                <option value="Rascunho">Rascunho</option>
+
+                <option value="Arquivado">Arquivado</option>
+
+            </select>
+        </div>
+
+        <!-- ==============================================
+             TABELA
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+            <table class="tabela-admin">
+
+                <thead>
+                    <tr>
+                        <th>Fármaco</th>
+                        <th>Classe</th>
+                        <th>Apresentação</th>
+                        <th>Espécies</th>
+                        <th>Via</th>
+                        <th>Status</th>
+                        <th>Atualização</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpo-tabela-farmacos">
+                    <tr><td colspan="8">Nenhum fármaco cadastrado.</td></tr>
+                </tbody>
+
+            </table>
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+
+            <span>Mostrando 0 de 0 fármacos</span>
+
+            <div class="paginacao">
+
+                <button type="button">←</button>
+
+                <button class="ativo" type="button">1</button>
+
+                <button type="button">→</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     BIBLIOTECA
+====================================================== -->
+
+<section id="tela-biblioteca" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">CENTRO DE ESTUDOS</span>
+            <h2>Visão Geral</h2>
+            <p>Gerencie disciplinas, conteúdos, resumos e materiais disponíveis na Biblioteca do VetAscend.</p>
+        </div>
+
+        <button id="botao-novo-conteudo" class="botao-primario" type="button">＋ Novo Conteúdo</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">📚</div>
+
+            <h3>Conteúdos</h3>
+
+            <strong id="quantidade-conteudos">0</strong>
+
+            <span>materiais cadastrados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">🩺</div>
+
+            <h3>Disciplinas</h3>
+
+            <strong id="quantidade-disciplinas">0</strong>
+
+            <span>áreas de estudo</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">🐶</div>
+
+            <h3>Espécies</h3>
+
+            <strong id="quantidade-especies">0</strong>
+
+            <span>espécies cadastradas</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Publicados</h3>
+
+            <strong id="conteudos-publicados">0</strong>
+
+            <span>conteúdos disponíveis</span>
+
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL PRINCIPAL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Conteúdos da Biblioteca</h2>
+            </div>
+        </div>
+
+        <!-- ==============================================
+             PESQUISA
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+
+            <input id="pesquisa-conteudo" type="search" placeholder="Pesquisar conteúdo...">
+
+            <select id="filtro-disciplina">
+                <option value="">Todas as disciplinas</option>
+                <option>Anatomia</option>
+                <option>Fisiologia</option>
+                <option>Patologia</option>
+                <option>Farmacologia</option>
+                <option>Clínica Médica</option>
+                <option>Cirurgia</option>
+                <option>Laboratório</option>
+            </select>
+
+            <select id="filtro-especie-biblioteca">
+                <option value="">Todas as espécies</option>
+                <option>Canina</option>
+                <option>Felina</option>
+                <option>Equina</option>
+                <option>Bovina</option>
+                <option>Silvestres e Exóticos</option>
+            </select>
+
+            <select id="filtro-status-conteudo">
+                <option value="">Todos os status</option>
+                <option>Publicado</option>
+                <option>Rascunho</option>
+                <option>Arquivado</option>
+            </select>
+
+        </div>
+
+        <!-- ==============================================
+             TABELA
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+
+            <table class="tabela-admin">
+
+                <thead>
+
+                    <tr>
+                        <th>Conteúdo</th>
+                        <th>Disciplina</th>
+                        <th>Espécie</th>
+                        <th>Tipo</th>
+                        <th>Status</th>
+                        <th>Atualização</th>
+                        <th>Ações</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="corpo-tabela-biblioteca">
+
+                    <tr>
+                        <td colspan="7">Nenhum conteúdo cadastrado.</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+
+            <span>Mostrando 0 de 0 conteúdos</span>
+
+            <div class="paginacao">
+
+                <button type="button">←</button>
+
+                <button class="ativo" type="button">1</button>
+
+                <button type="button">→</button>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     FLASHCARDS
+====================================================== -->
+
+<section id="tela-flashcards" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">CENTRO DE ESTUDOS</span>
+            <h2>Visão Geral</h2>
+            <p>Gerencie todos os flashcards utilizados nos estudos do VetAscend.</p>
+        </div>
+
+        <button id="botao-novo-flashcard" class="botao-primario" type="button">＋ Novo Flashcard</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">🗂</div>
+
+            <h3>Total</h3>
+
+            <strong id="quantidade-flashcards">0</strong>
+
+            <span>flashcards cadastrados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">📚</div>
+
+            <h3>Baralhos</h3>
+
+            <strong id="quantidade-baralhos">0</strong>
+
+            <span>conjuntos criados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">🧠</div>
+
+            <h3>Revisão</h3>
+
+            <strong id="flashcards-revisao">0</strong>
+
+            <span>em revisão espaçada</span>
+            
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Publicados</h3>
+
+            <strong id="flashcards-publicados">0</strong>
+
+            <span>disponíveis aos alunos</span>
+
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Lista de Flashcards</h2>
+            </div>
+        </div>
+
+        <!-- ==============================================
+             PESQUISA
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+
+            <input id="pesquisa-flashcard" type="search" placeholder="Pesquisar flashcard...">
+
+            <select id="filtro-disciplina-flashcard">
+                <option value="">Todas as disciplinas</option>
+                <option>Anatomia</option>
+                <option>Fisiologia</option>
+                <option>Patologia</option>
+                <option>Farmacologia</option>
+                <option>Clínica Médica</option>
+                <option>Cirurgia</option>
+                <option>Laboratório</option>
+            </select>
+
+            <select id="filtro-dificuldade-flashcard">
+                <option value="">Todas as dificuldades</option>
+                <option>Fácil</option>
+                <option>Intermediário</option>
+                <option>Difícil</option>
+            </select>
+
+            <select id="filtro-status-flashcard">
+                <option value="">Todos os status</option>
+                <option>Publicado</option>
+                <option>Rascunho</option>
+                <option>Arquivado</option>
+            </select>
+
+        </div>
+
+        <!-- ==============================================
+             TABELA
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+
+            <table class="tabela-admin">
+
+                <thead>
+                    <tr>
+                        <th>Pergunta</th>
+                        <th>Disciplina</th>
+                        <th>Dificuldade</th>
+                        <th>Baralho</th>
+                        <th>Status</th>
+                        <th>Atualização</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpo-tabela-flashcards">
+                    <tr>
+                        <td colspan="7">Nenhum flashcard cadastrado.</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+
+            <span>Mostrando 0 de 0 flashcards</span>
+
+            <div class="paginacao">
+
+                <button type="button">←</button>
+
+                <button class="ativo" type="button">1</button>
+
+                <button type="button">→</button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     QUESTÕES E SIMULADOS
+====================================================== -->
+
+<section id="tela-questoes" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">CENTRO DE ESTUDOS</span>
+            <h2>Visão Geral</h2>
+            <p>Gerencie o banco de questões, provas e simulados disponíveis no VetAscend.</p>
+        </div>
+
+        <button id="botao-nova-questao" class="botao-primario" type="button">＋ Nova Questão</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">?</div>
+
+            <h3>Questões</h3>
+
+            <strong id="quantidade-questoes">0</strong>
+
+            <span>questões cadastradas</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">▤</div>
+
+            <h3>Simulados</h3>
+
+            <strong id="quantidade-simulados">0</strong>
+
+            <span>simulados criados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">⌛</div>
+
+            <h3>Rascunhos</h3>
+
+            <strong id="questoes-rascunho">0</strong>
+
+            <span>em preparação</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Publicadas</h3>
+
+            <strong id="questoes-publicadas">0</strong>
+            
+            <span>disponíveis aos alunos</span>
+
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL PRINCIPAL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Banco de Questões</h2>
+            </div>
+
+            <button id="botao-novo-simulado" class="botao-secundario" type="button">＋ Novo Simulado</button>
+        </div>
+
+        <!-- ==============================================
+             PESQUISA E FILTROS
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+            <input id="pesquisa-questao" type="search" placeholder="Pesquisar questão...">
+
+            <select id="filtro-disciplina-questao">
+                <option value="">Todas as disciplinas</option>
+                <option value="Anatomia">Anatomia</option>
+                <option value="Fisiologia">Fisiologia</option>
+                <option value="Patologia">Patologia</option>
+                <option value="Farmacologia">Farmacologia</option>
+                <option value="Clínica Médica">Clínica Médica</option>
+                <option value="Cirurgia">Cirurgia</option>
+                <option value="Laboratório">Laboratório</option>
+            </select>
+
+            <select id="filtro-tipo-questao">
+                <option value="">Todos os tipos</option>
+                <option value="Múltipla escolha">Múltipla escolha</option>
+                <option value="Verdadeiro ou falso">Verdadeiro ou falso</option>
+                <option value="Dissertativa">Dissertativa</option>
+                <option value="Caso clínico">Caso clínico</option>
+            </select>
+
+            <select id="filtro-dificuldade-questao">
+                <option value="">Todas as dificuldades</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Intermediária">Intermediária</option>
+                <option value="Difícil">Difícil</option>
+            </select>
+
+            <select id="filtro-status-questao">
+                <option value="">Todos os status</option>
+                <option value="Publicada">Publicada</option>
+                <option value="Rascunho">Rascunho</option>
+                <option value="Arquivada">Arquivada</option>
+            </select>
+        </div>
+
+        <!-- ==============================================
+             TABELA
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+
+            <table class="tabela-admin">
+
+                <thead>
+                    <tr>
+                        <th>Questão</th>
+                        <th>Disciplina</th>
+                        <th>Tipo</th>
+                        <th>Dificuldade</th>
+                        <th>Simulados</th>
+                        <th>Status</th>
+                        <th>Atualização</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpo-tabela-questoes">
+                    <tr><td colspan="8">Nenhuma questão cadastrada.</td></tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+
+            <span>Mostrando 0 de 0 questões</span>
+
+            <div class="paginacao">
+
+                <button type="button">←</button>
+
+                <button class="ativo" type="button">1</button>
+
+                <button type="button">→</button>
+
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     TABELAS DE REFERÊNCIA
+====================================================== -->
+
+<section id="tela-referencias" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">ESTUDOS E FERRAMENTAS</span>
+            <h2>Visão Geral</h2>
+            <p>Gerencie os valores de referência, parâmetros clínicos e tabelas utilizadas no VetAscend.</p>
+        </div>
+
+        <button id="botao-nova-tabela" class="botao-primario" type="button">＋ Nova Tabela</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">▦</div>
+
+            <h3>Tabelas</h3>
+            <strong id="quantidade-tabelas">0</strong>
+
+            <span>tabelas cadastradas</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">⌁</div>
+
+            <h3>Parâmetros</h3>
+            <strong id="quantidade-parametros">0</strong>
+
+            <span>valores de referência</span>
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">🐾</div>
+
+            <h3>Espécies</h3>
+
+            <strong id="especies-tabelas">0</strong>
+
+            <span>espécies contempladas</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Publicadas</h3>
+
+            <strong id="tabelas-publicadas">0</strong>
+
+            <span>disponíveis para consulta</span>
+
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL PRINCIPAL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Lista de Tabelas</h2>
+            </div>
+        </div>
+
+        <!-- ==============================================
+             PESQUISA E FILTROS
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+
+            <input id="pesquisa-tabela" type="search" placeholder="Pesquisar tabela...">
+
+            <select id="filtro-categoria-tabela">
+                <option value="">Todas as categorias</option>
+                <option value="Hematologia">Hematologia</option>
+                <option value="Bioquímica">Bioquímica</option>
+                <option value="Urinálise">Urinálise</option>
+                <option value="Sinais vitais">Sinais vitais</option>
+                <option value="Fluidoterapia">Fluidoterapia</option>
+                <option value="Nutrição">Nutrição</option>
+            </select>
+
+            <select id="filtro-especie-tabela">
+                <option value="">Todas as espécies</option>
+                <option value="Canina">Canina</option>
+                <option value="Felina">Felina</option>
+                <option value="Equina">Equina</option>
+                <option value="Bovina">Bovina</option>
+                <option value="Silvestres e Exóticos">Silvestres e Exóticos</option>
+            </select>
+
+            <select id="filtro-status-tabela">
+                <option value="">Todos os status</option>
+                <option value="Publicada">Publicada</option>
+                <option value="Rascunho">Rascunho</option>
+                <option value="Arquivada">Arquivada</option>
+            </select>
+
+        </div>
+
+        <!-- ==============================================
+             TABELA
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+
+            <table class="tabela-admin">
+
+                <thead>
+                    <tr>
+                        <th>Tabela</th>
+                        <th>Categoria</th>
+                        <th>Espécie</th>
+                        <th>Parâmetros</th>
+                        <th>Unidade</th>
+                        <th>Status</th>
+                        <th>Atualização</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpo-tabela-referencias">
+                    <tr><td colspan="8">Nenhuma tabela cadastrada.</td></tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+
+            <span>Mostrando 0 de 0 tabelas</span>
+
+            <div class="paginacao">
+
+                <button type="button">←</button>
+
+                <button class="ativo" type="button">1</button>
+
+                <button type="button">→</button>
+
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     USUÁRIOS
+====================================================== -->
+
+<section id="tela-usuarios" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">ADMINISTRAÇÃO</span>
+            <h2>Visão Geral</h2>
+            <p>Gerencie os usuários, perfis de acesso, progresso e situação das contas do VetAscend.</p>
+        </div>
+
+        <button id="botao-novo-usuario" class="botao-primario" type="button">＋ Novo Usuário</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">👥</div>
+
+            <h3>Total</h3>
+
+            <strong id="quantidade-usuarios">0</strong>
+            
+            <span>usuários cadastrados</span>
+
+        </article>
+
+        <article class="card-estatistica">
+
+            <div class="icone-card">✓</div>
+
+            <h3>Ativos</h3>
+            
+            <strong id="usuarios-ativos">0</strong>
+
+            <span>contas em uso</span>
+
+        </article>
+
+        <article class="card-estatistica">
+            <div class="icone-card">🎓</div>
+            <h3>Estudantes</h3>
+            <strong id="usuarios-estudantes">0</strong>
+            <span>perfis de estudante</span>
+        </article>
+
+        <article class="card-estatistica">
+            <div class="icone-card">!</div>
+            <h3>Bloqueados</h3>
+            <strong id="usuarios-bloqueados">0</strong>
+            <span>contas sem acesso</span>
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         PAINEL PRINCIPAL
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">GERENCIAMENTO</span>
+                <h2>Lista de Usuários</h2>
+            </div>
+        </div>
+
+        <!-- ==============================================
+             PESQUISA E FILTROS
+        =============================================== -->
+
+        <div class="barra-ferramentas">
+
+            <input id="pesquisa-usuario" type="search" placeholder="Pesquisar por nome ou e-mail...">
+
+            <select id="filtro-perfil-usuario">
+                <option value="">Todos os perfis</option>
+                <option value="Estudante de Veterinária">Estudante de Veterinária</option>
+                <option value="Profissional da área veterinária">Profissional da área veterinária</option>
+                <option value="Amante dos animais">Amante dos animais</option>
+                <option value="Administrador">Administrador</option>
+            </select>
+
+            <select id="filtro-status-usuario">
+                <option value="">Todos os status</option>
+                <option value="Ativo">Ativo</option>
+                <option value="Pendente">Pendente</option>
+                <option value="Bloqueado">Bloqueado</option>
+                <option value="Inativo">Inativo</option>
+            </select>
+
+            <select id="filtro-nivel-usuario">
+                <option value="">Todos os níveis</option>
+                <option value="1-5">Nível 1 a 5</option>
+                <option value="6-10">Nível 6 a 10</option>
+                <option value="11-20">Nível 11 a 20</option>
+                <option value="21+">Nível 21 ou superior</option>
+            </select>
+
+        </div>
+
+        <!-- ==============================================
+             TABELA
+        =============================================== -->
+
+        <div class="tabela-responsiva">
+
+            <table class="tabela-admin">
+
+                <thead>
+                    <tr>
+                        <th>Usuário</th>
+                        <th>Perfil</th>
+                        <th>Nível</th>
+                        <th>Casos</th>
+                        <th>Cadastro</th>
+                        <th>Último acesso</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+
+                <tbody id="corpo-tabela-usuarios">
+                    <tr><td colspan="8">Nenhum usuário cadastrado.</td></tr>
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- ==============================================
+             PAGINAÇÃO
+        =============================================== -->
+
+        <div class="rodape-tabela">
+
+            <span>Mostrando 0 de 0 usuários</span>
+
+            <div class="paginacao">
+
+                <button type="button">←</button>
+
+                <button class="ativo" type="button">1</button>
+
+                <button type="button">→</button>
+            </div>
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- ======================================================
+     CONFIGURAÇÕES
+====================================================== -->
+
+<section id="tela-configuracoes" class="tela-admin">
+
+    <!-- ==================================================
+         VISÃO GERAL
+    =================================================== -->
+
+    <div class="topo-tela">
+        <div>
+            <span class="subtitulo-painel">ADMINISTRAÇÃO</span>
+            <h2>Visão Geral</h2>
+            <p>Configure as regras gerais, preferências e comportamentos do VetAscend.</p>
+        </div>
+
+        <button id="botao-salvar-configuracoes" class="botao-primario" type="button">Salvar Alterações</button>
+    </div>
+
+    <!-- ==================================================
+         CARDS
+    =================================================== -->
+
+    <section class="grade-estatisticas">
+
+        <article class="card-estatistica">
+            <div class="icone-card">⚙</div>
+            <h3>Sistema</h3>
+            <strong>Ativo</strong>
+            <span>funcionamento geral</span>
+        </article>
+
+        <article class="card-estatistica">
+            <div class="icone-card">☁</div>
+            <h3>Banco de Dados</h3>
+            <strong>Conectado</strong>
+            <span>sincronização disponível</span>
+        </article>
+
+        <article class="card-estatistica">
+            <div class="icone-card">🔒</div>
+            <h3>Segurança</h3>
+            <strong>Protegido</strong>
+            <span>controle de acesso</span>
+        </article>
+
+        <article class="card-estatistica">
+            <div class="icone-card">↻</div>
+            <h3>Backup</h3>
+            <strong>Automático</strong>
+            <span>cópias de segurança</span>
+        </article>
+
+    </section>
+
+    <!-- ==================================================
+         CONFIGURAÇÕES GERAIS
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">SISTEMA</span>
+                <h2>Configurações Gerais</h2>
+            </div>
+        </div>
+
+        <div class="grade-configuracoes">
+
+            <div class="grupo-configuracao">
+                <label for="nome-aplicacao">Nome da aplicação</label>
+                <input id="nome-aplicacao" type="text" value="VetAscend">
+            </div>
+
+            <div class="grupo-configuracao">
+                <label for="idioma-aplicacao">Idioma padrão</label>
+                <select id="idioma-aplicacao">
+                    <option value="pt-BR">Português — Brasil</option>
+                    <option value="en-US">Inglês</option>
+                    <option value="es">Espanhol</option>
+                </select>
+            </div>
+
+            <div class="grupo-configuracao">
+                <label for="fuso-horario">Fuso horário</label>
+                <select id="fuso-horario">
+                    <option value="America/Sao_Paulo">Brasília — GMT-3</option>
+                    <option value="UTC">UTC</option>
+                </select>
+            </div>
+
+            <div class="grupo-configuracao">
+                <label for="email-suporte">E-mail de suporte</label>
+                <input id="email-suporte" type="email" placeholder="suporte@vetascend.com">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================================================
+         SIMULAÇÃO
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">CLÍNICA E SIMULAÇÃO</span>
+                <h2>Regras da Simulação</h2>
+            </div>
+        </div>
+
+        <div class="grade-configuracoes">
+
+            <div class="grupo-configuracao">
+                <label for="quantidade-pacientes-plantao">Pacientes por plantão</label>
+                <select id="quantidade-pacientes-plantao">
+                    <option value="4">4 pacientes</option>
+                    <option value="5" selected>5 pacientes</option>
+                    <option value="6">6 pacientes</option>
+                </select>
+            </div>
+
+            <div class="grupo-configuracao">
+                <label for="dificuldade-padrao">Dificuldade padrão</label>
+                <select id="dificuldade-padrao">
+                    <option value="Fácil">Fácil</option>
+                    <option value="Intermediária" selected>Intermediária</option>
+                    <option value="Difícil">Difícil</option>
+                </select>
+            </div>
+
+            <div class="grupo-configuracao">
+                <label for="percentual-emergencias">Frequência de emergências</label>
+                <select id="percentual-emergencias">
+                    <option value="10">Baixa</option>
+                    <option value="25" selected>Moderada</option>
+                    <option value="40">Alta</option>
+                </select>
+            </div>
+
+            <div class="grupo-configuracao">
+                <label for="repeticao-casos">Repetição de casos</label>
+                <select id="repeticao-casos">
+                    <option value="nao">Evitar no mesmo plantão</option>
+                    <option value="sim">Permitir repetição</option>
+                </select>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================================================
+         CENTRO DE ESTUDOS
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">CENTRO DE ESTUDOS</span>
+                <h2>Preferências de Aprendizado</h2>
+            </div>
+        </div>
+
+        <div class="lista-opcoes-configuracao">
+
+            <label class="opcao-configuracao">
+                <div>
+                    <strong>Revisão espaçada</strong>
+                    <span>Utilizar o desempenho do aluno para programar revisões.</span>
+                </div>
+                <input id="revisao-espacada" type="checkbox" checked>
+            </label>
+
+            <label class="opcao-configuracao">
+                <div>
+                    <strong>Feedback após os casos</strong>
+                    <span>Exibir correções, explicações e recomendações da Dra. Helena.</span>
+                </div>
+                <input id="feedback-casos" type="checkbox" checked>
+            </label>
+
+            <label class="opcao-configuracao">
+                <div>
+                    <strong>Recomendações de estudo</strong>
+                    <span>Sugerir conteúdos com base nos erros e dificuldades do usuário.</span>
+                </div>
+                <input id="recomendacoes-estudo" type="checkbox" checked>
+            </label>
+
+            <label class="opcao-configuracao">
+                <div>
+                    <strong>Mostrar respostas imediatamente</strong>
+                    <span>Exibir a resposta correta logo após cada questão.</span>
+                </div>
+                <input id="resposta-imediata" type="checkbox">
+            </label>
+
+        </div>
+
+    </section>
+
+    <!-- ==================================================
+         ACESSO E SEGURANÇA
+    =================================================== -->
+
+    <section class="painel">
+
+        <div class="cabecalho-painel">
+            <div>
+                <span class="subtitulo-painel">SEGURANÇA</span>
+                <h2>Acesso e Manutenção</h2>
+            </div>
+        </div>
+
+        <div class="lista-acoes-configuracao">
+
+            <div class="acao-configuracao">
+
+                <div>
+
+                    <strong>Manutenção do sistema</strong>
+
+                    <span>Bloqueia temporariamente o acesso dos usuários.</span>
+
+                </div>
+
+                <button id="botao-manutencao" class="botao-secundario" type="button">Ativar</button>
+
+            </div>
+
+            <div class="acao-configuracao">
+                <div>
+                    <strong>Criar backup manual</strong>
+
+                    <span>Gera uma cópia atual dos dados do sistema.</span>
+
+                </div>
+                
+                <button id="botao-backup" class="botao-secundario" type="button">Criar Backup</button>
+
+            </div>
+
+            <div class="acao-configuracao">
+
+                <div>
+                    <strong>Limpar dados de teste</strong>
+
+                    <span>Remove registros utilizados apenas durante o desenvolvimento.</span>
+
+                </div>
+
+                <button id="botao-limpar-testes" class="botao-perigo" type="button">Limpar Dados</button>
+            </div>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+<!-- =====================================================
+     MODAL - GERADOR DE PLANTÕES
+====================================================== -->
+
+<div
+    id="modal-plantao"
+    class="modal-admin">
+
+    <div class="janela-modal modal-grande">
+
+        <!-- ===============================================
+             CABEÇALHO
+        ================================================ -->
+
+        <header class="cabecalho-modal">
+
+            <div>
+
+                <span class="subtitulo-painel">
+                    CLÍNICA E SIMULAÇÃO
+                </span>
+
+                <h2 id="titulo-modal-plantao">
+                    Novo Plantão
+                </h2>
+
+            </div>
+
+            <button
+                id="fechar-modal-plantao"
+                class="botao-icone"
+                type="button"
+                aria-label="Fechar modal">
+
+                ✕
+
+            </button>
+
+        </header>
+
+
+        <!-- ===============================================
+             CONTEÚDO
+        ================================================ -->
+
+        <div class="conteudo-modal">
+
+            <form
+                id="formulario-plantao"
+                novalidate>
+
+
+                <!-- =======================================
+                     INFORMAÇÕES DO PLANTÃO
+                ======================================== -->
+
+                <section class="secao-formulario-plantao">
+
+                    <div class="cabecalho-etapa">
+
+                        <div class="cabecalho-etapa__icone">
+                            PLN
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Informações do plantão
+                            </h3>
+
+                            <p>
+                                Defina a identificação, a data
+                                e o período do plantão.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="grade-formulario">
+
+                        <div class="grupo-campo grupo-campo--inteiro">
+
+                            <label for="nome-plantao">
+                                Nome do plantão *
+                            </label>
+
+                            <input
+                                id="nome-plantao"
+                                type="text"
+                                placeholder="Ex.: Plantão da manhã — Clínica Geral">
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="data-plantao">
+                                Data *
+                            </label>
+
+                            <input
+                                id="data-plantao"
+                                type="date">
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="turno-plantao">
+                                Turno
+                            </label>
+
+                            <select id="turno-plantao">
+
+                                <option value="Manhã">
+                                    Manhã
+                                </option>
+
+                                <option value="Tarde">
+                                    Tarde
+                                </option>
+
+                                <option value="Noite">
+                                    Noite
+                                </option>
+
+                                <option value="Madrugada">
+                                    Madrugada
+                                </option>
+
+                                <option value="Personalizado">
+                                    Personalizado
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="horario-inicio-plantao">
+                                Horário inicial
+                            </label>
+
+                            <input
+                                id="horario-inicio-plantao"
+                                type="time"
+                                value="08:00">
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="horario-fim-plantao">
+                                Horário final
+                            </label>
+
+                            <input
+                                id="horario-fim-plantao"
+                                type="time"
+                                value="17:00">
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="status-plantao">
+                                Status
+                            </label>
+
+                            <select id="status-plantao">
+
+                                <option value="Rascunho">
+                                    Rascunho
+                                </option>
+
+                                <option value="Atual">
+                                    Plantão atual
+                                </option>
+
+                                <option value="Agendado">
+                                    Agendado
+                                </option>
+
+                                <option value="Finalizado">
+                                    Finalizado
+                                </option>
+
+                                <option value="Arquivado">
+                                    Arquivado
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <div class="divisor-etapa"></div>
+
+
+                <!-- =======================================
+                     CONFIGURAÇÃO DA GERAÇÃO
+                ======================================== -->
+
+                <section class="secao-formulario-plantao">
+
+                    <div class="cabecalho-etapa">
+
+                        <div class="cabecalho-etapa__icone">
+                            CFG
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Configuração da geração
+                            </h3>
+
+                            <p>
+                                Defina como os pacientes serão
+                                distribuídos no plantão.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="grade-formulario">
+
+                        <div class="grupo-campo">
+
+                            <label for="quantidade-pacientes-novo-plantao">
+                                Quantidade de pacientes
+                            </label>
+
+                            <select id="quantidade-pacientes-novo-plantao">
+
+                                <option value="4">
+                                    4 pacientes
+                                </option>
+
+                                <option value="5" selected>
+                                    5 pacientes
+                                </option>
+
+                                <option value="6">
+                                    6 pacientes
+                                </option>
+
+                                <option value="7">
+                                    7 pacientes
+                                </option>
+
+                                <option value="8">
+                                    8 pacientes
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="dificuldade-novo-plantao">
+                                Dificuldade predominante
+                            </label>
+
+                            <select id="dificuldade-novo-plantao">
+
+                                <option value="Variada">
+                                    Variada
+                                </option>
+
+                                <option value="Fácil">
+                                    Fácil
+                                </option>
+
+                                <option value="Intermediária">
+                                    Intermediária
+                                </option>
+
+                                <option value="Difícil">
+                                    Difícil
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="frequencia-emergencias-plantao">
+                                Frequência de emergências
+                            </label>
+
+                            <select id="frequencia-emergencias-plantao">
+
+                                <option value="Nenhuma">
+                                    Nenhuma
+                                </option>
+
+                                <option value="Baixa">
+                                    Baixa
+                                </option>
+
+                                <option value="Moderada" selected>
+                                    Moderada
+                                </option>
+
+                                <option value="Alta">
+                                    Alta
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="repeticao-casos-plantao">
+                                Repetição de casos
+                            </label>
+
+                            <select id="repeticao-casos-plantao">
+
+                                <option value="Evitar">
+                                    Evitar repetições
+                                </option>
+
+                                <option value="Permitir">
+                                    Permitir repetições
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="intervalo-atendimentos-plantao">
+                                Intervalo entre atendimentos
+                            </label>
+
+                            <select id="intervalo-atendimentos-plantao">
+
+                                <option value="30">
+                                    30 minutos
+                                </option>
+
+                                <option value="45">
+                                    45 minutos
+                                </option>
+
+                                <option value="60" selected>
+                                    1 hora
+                                </option>
+
+                                <option value="90">
+                                    1 hora e 30 minutos
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="modo-geracao-plantao">
+                                Modo de geração
+                            </label>
+
+                            <select id="modo-geracao-plantao">
+
+                                <option value="Automatico">
+                                    Automático
+                                </option>
+
+                                <option value="Selecionados">
+                                    Somente casos selecionados
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <div class="divisor-etapa"></div>
+
+
+                <!-- =======================================
+     FONTES E BASES DA GERAÇÃO
+======================================== -->
+
+<section class="secao-formulario-plantao">
+
+    <div class="cabecalho-etapa">
+
+        <div class="cabecalho-etapa__icone">
+            GER
+        </div>
+
+        <div>
+
+            <h3>
+                Fonte da geração
+            </h3>
+
+            <p>
+                Escolha de onde o VetAscend deverá obter as
+                informações usadas para gerar os pacientes.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ===================================
+         MODO DE GERAÇÃO
+    ==================================== -->
+
+    <div class="bloco-opcoes-plantao">
+
+        <h4>
+            Como os pacientes serão criados?
+        </h4>
+
+        <div class="opcoes-fonte-geracao">
+
+            <label class="opcao-fonte-geracao">
+
+                <input
+                    type="radio"
+                    name="fonte-geracao-plantao"
+                    value="Doencas"
+                    checked>
+
+                <span class="opcao-fonte-geracao__icone">
+                    🦠
+                </span>
+
+                <span class="opcao-fonte-geracao__conteudo">
+
+                    <strong>
+                        Gerar automaticamente pelas doenças
+                    </strong>
+
+                    <small>
+                        O sistema cria casos e pacientes diferentes
+                        usando os dados cadastrados no Banco de Doenças.
+                    </small>
+
+                </span>
+
+                <span class="opcao-fonte-geracao__check">
+                    ✓
+                </span>
+
+            </label>
+
+
+            <label class="opcao-fonte-geracao">
+
+                <input
+                    type="radio"
+                    name="fonte-geracao-plantao"
+                    value="Casos">
+
+                <span class="opcao-fonte-geracao__icone">
+                    📋
+                </span>
+
+                <span class="opcao-fonte-geracao__conteudo">
+
+                    <strong>
+                        Usar casos clínicos manuais
+                    </strong>
+
+                    <small>
+                        Utiliza somente casos especiais cadastrados
+                        manualmente no Banco de Casos.
+                    </small>
+
+                </span>
+
+                <span class="opcao-fonte-geracao__check">
+                    ✓
+                </span>
+
+            </label>
+
+
+            <label class="opcao-fonte-geracao">
+
+                <input
+                    type="radio"
+                    name="fonte-geracao-plantao"
+                    value="Misto">
+
+                <span class="opcao-fonte-geracao__icone">
+                    🔀
+                </span>
+
+                <span class="opcao-fonte-geracao__conteudo">
+
+                    <strong>
+                        Combinar doenças e casos manuais
+                    </strong>
+
+                    <small>
+                        Mistura pacientes gerados automaticamente
+                        com casos clínicos especiais.
+                    </small>
+
+                </span>
+
+                <span class="opcao-fonte-geracao__check">
+                    ✓
+                </span>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+    <div class="divisor-etapa"></div>
+
+
+    <!-- ===================================
+         PERFIL DO PLANTÃO
+    ==================================== -->
+
+    <div class="bloco-opcoes-plantao">
+
+        <h4>
+            Perfil do plantão
+        </h4>
+
+        <p class="texto-apoio-plantao">
+            O perfil escolhido influencia quais doenças terão
+            maior chance de aparecer.
+        </p>
+
+        <div class="grade-perfis-plantao">
+
+            <label class="cartao-perfil-plantao">
+
+                <input
+                    type="radio"
+                    name="perfil-plantao"
+                    value="Aleatório"
+                    checked>
+
+                <span class="cartao-perfil-plantao__icone">
+                    🎲
+                </span>
+
+                <strong>
+                    Aleatório
+                </strong>
+
+                <small>
+                    Mistura todas as áreas.
+                </small>
+
+            </label>
+
+
+            <label class="cartao-perfil-plantao">
+
+                <input
+                    type="radio"
+                    name="perfil-plantao"
+                    value="Clínica Geral">
+
+                <span class="cartao-perfil-plantao__icone">
+                    🩺
+                </span>
+
+                <strong>
+                    Clínica Geral
+                </strong>
+
+                <small>
+                    Casos variados da rotina.
+                </small>
+
+            </label>
+
+
+            <label class="cartao-perfil-plantao">
+
+                <input
+                    type="radio"
+                    name="perfil-plantao"
+                    value="Emergências">
+
+                <span class="cartao-perfil-plantao__icone">
+                    🚨
+                </span>
+
+                <strong>
+                    Emergências
+                </strong>
+
+                <small>
+                    Prioriza quadros graves.
+                </small>
+
+            </label>
+
+
+            <label class="cartao-perfil-plantao">
+
+                <input
+                    type="radio"
+                    name="perfil-plantao"
+                    value="Reprodução">
+
+                <span class="cartao-perfil-plantao__icone">
+                    ♀
+                </span>
+
+                <strong>
+                    Reprodução
+                </strong>
+
+                <small>
+                    Sistema reprodutor.
+                </small>
+
+            </label>
+
+
+            <label class="cartao-perfil-plantao">
+
+                <input
+                    type="radio"
+                    name="perfil-plantao"
+                    value="Dermatologia">
+
+                <span class="cartao-perfil-plantao__icone">
+                    🐾
+                </span>
+
+                <strong>
+                    Dermatologia
+                </strong>
+
+                <small>
+                    Sistema tegumentar.
+                </small>
+
+            </label>
+
+
+            <label class="cartao-perfil-plantao">
+
+                <input
+                    type="radio"
+                    name="perfil-plantao"
+                    value="Gastroenterologia">
+
+                <span class="cartao-perfil-plantao__icone">
+                    DG
+                </span>
+
+                <strong>
+                    Gastroenterologia
+                </strong>
+
+                <small>
+                    Sistema digestório.
+                </small>
+
+            </label>
+
+
+            <label class="cartao-perfil-plantao">
+
+                <input
+                    type="radio"
+                    name="perfil-plantao"
+                    value="Neurologia">
+
+                <span class="cartao-perfil-plantao__icone">
+                    🧠
+                </span>
+
+                <strong>
+                    Neurologia
+                </strong>
+
+                <small>
+                    Sistema nervoso.
+                </small>
+
+            </label>
+
+
+            <label class="cartao-perfil-plantao">
+
+                <input
+                    type="radio"
+                    name="perfil-plantao"
+                    value="Respiratório">
+
+                <span class="cartao-perfil-plantao__icone">
+                    RP
+                </span>
+
+                <strong>
+                    Respiratório
+                </strong>
+
+                <small>
+                    Sistema respiratório.
+                </small>
+
+            </label>
+
+        </div>
+
+    </div>
+
+
+    <div class="divisor-etapa"></div>
+
+
+    <!-- ===================================
+         BASES DISPONÍVEIS
+    ==================================== -->
+
+    <div class="cabecalho-lista-bases-plantao">
+
+        <div>
+
+            <h4 id="titulo-bases-plantao">
+                Doenças disponíveis
+            </h4>
+
+            <p id="descricao-bases-plantao">
+                Selecione as doenças que poderão ser utilizadas
+                na geração automática.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- PESQUISA E SELEÇÃO -->
+
+    <div class="barra-casos-plantao">
+
+        <input
+            id="pesquisa-bases-plantao"
+            type="search"
+            placeholder="Pesquisar doença...">
+
+        <label class="opcao-selecao">
+
+            <input
+                id="selecionar-todas-bases-plantao"
+                type="checkbox">
+
+            <span>
+                Selecionar todas
+            </span>
+
+        </label>
+
+    </div>
+
+
+    <!-- LISTA GERADA PELO JAVASCRIPT -->
+
+    <div
+        id="lista-bases-disponiveis-plantao"
+        class="lista-casos-disponiveis">
+
+        <div class="estado-vazio">
+
+            <div class="estado-vazio__icone">
+                🦠
+            </div>
+
+            <h3>
+                Nenhuma doença disponível
+            </h3>
+
+            <p>
+                Cadastre doenças ativas antes de gerar
+                um plantão automático.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- RESUMO DA SELEÇÃO -->
+
+    <div class="resumo-selecao-plantao">
+
+        <div>
+
+            <span>
+                Bases disponíveis
+            </span>
+
+            <strong id="quantidade-bases-disponiveis-plantao">
+                0
+            </strong>
+
+        </div>
+
+        <div>
+
+            <span>
+                Bases selecionadas
+            </span>
+
+            <strong id="quantidade-bases-selecionadas-plantao">
+                0
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+                
+
+
+                <div class="divisor-etapa"></div>
+
+
+                <!-- =======================================
+                     PRÉVIA DO PLANTÃO
+                ======================================== -->
+
+                <section class="secao-formulario-plantao">
+
+                    <div class="cabecalho-etapa">
+
+                        <div class="cabecalho-etapa__icone">
+                            PRE
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Prévia dos pacientes
+                            </h3>
+
+                            <p>
+                                A lista abaixo será preenchida após
+                                clicar em Gerar prévia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="acoes-previa-plantao">
+
+                        <button
+                            id="botao-gerar-previa-plantao"
+                            class="botao-secundario"
+                            type="button">
+
+                            🎲 Gerar prévia
+
+                        </button>
+
+                        <button
+                            id="botao-limpar-previa-plantao"
+                            class="botao-secundario"
+                            type="button">
+
+                            Limpar prévia
+
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="lista-previa-pacientes-plantao"
+                        class="lista-previa-pacientes">
+
+                        <div class="estado-vazio">
+
+                            <div class="estado-vazio__icone">
+                                🐾
+                            </div>
+
+                            <h3>
+                                Nenhum paciente gerado
+                            </h3>
+
+                            <p>
+                                Configure o plantão e clique em
+                                Gerar prévia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </form>
+
+        </div>
+
+
+        <!-- ===============================================
+             RODAPÉ
+        ================================================ -->
+
+        <footer class="rodape-modal">
+
+            <button
+                id="botao-cancelar-plantao"
+                class="botao-secundario"
+                type="button">
+
+                Cancelar
+
+            </button>
+
+            <button
+                id="botao-salvar-rascunho-plantao"
+                class="botao-secundario"
+                type="button">
+
+                Salvar rascunho
+
+            </button>
+
+            <button
+                id="botao-gerar-plantao"
+                class="botao-primario"
+                type="button">
+
+                🎲 Gerar Plantão
+
+            </button>
+
+        </footer>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MODAL - CASO CLÍNICO
+====================================================== -->
+
+<div
+    id="modal-caso"
+    class="modal-admin">
+
+    <div class="janela-modal modal-grande">
+
+        <!-- ===============================================
+             CABEÇALHO DO MODAL
+        ================================================ -->
+
+        <header class="cabecalho-modal">
+
+            <div>
+
+                <span class="subtitulo-painel">
+                    BANCO DE CASOS CLÍNICOS
+                </span>
+
+                <h2 id="titulo-modal-caso">
+                    Novo Caso Clínico
+                </h2>
+
+            </div>
+
+            <button
+                id="fechar-modal-caso"
+                class="botao-icone"
+                type="button"
+                aria-label="Fechar modal">
+
+                ✕
+
+            </button>
+
+        </header>
+
+
+        <!-- ===============================================
+             CONTEÚDO DO MODAL
+        ================================================ -->
+
+        <div class="conteudo-modal">
+
+            <form
+                id="formulario-caso"
+                novalidate>
+
+                <!-- =======================================
+                     INFORMAÇÕES DO CASO
+                ======================================== -->
+
+                <section class="secao-formulario-caso">
+
+                    <div class="cabecalho-etapa">
+
+                        <div class="cabecalho-etapa__icone">
+                            CAS
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Informações do caso
+                            </h3>
+
+                            <p>
+                                Defina a doença principal e as
+                                configurações da simulação.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="grade-formulario">
+
+                        <div class="grupo-campo grupo-campo--inteiro">
+
+                            <label for="titulo-caso">
+                                Título do caso *
+                            </label>
+
+                            <input
+                                id="titulo-caso"
+                                type="text"
+                                placeholder="Ex.: Luna com suspeita de piometra">
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="doenca-caso">
+                                Doença relacionada *
+                            </label>
+
+                            <select id="doenca-caso">
+
+                                <option value="">
+                                    Selecione uma doença
+                                </option>
+
+                            </select>
+
+                            <small>
+                                As doenças serão carregadas
+                                automaticamente do Banco de Doenças.
+                            </small>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="especie-caso">
+                                Espécie
+                            </label>
+
+                            <select id="especie-caso">
+
+                                <option value="">
+                                    Selecione primeiro a doença
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="dificuldade-caso">
+                                Dificuldade
+                            </label>
+
+                            <select id="dificuldade-caso">
+
+                                <option value="Fácil">
+                                    Fácil
+                                </option>
+
+                                <option value="Intermediária">
+                                    Intermediária
+                                </option>
+
+                                <option value="Difícil">
+                                    Difícil
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="tipo-atendimento-caso">
+                                Tipo de atendimento
+                            </label>
+
+                            <select id="tipo-atendimento-caso">
+
+                                <option value="Consulta">
+                                    Consulta
+                                </option>
+
+                                <option value="Prioritário">
+                                    Prioritário
+                                </option>
+
+                                <option value="Emergência">
+                                    Emergência
+                                </option>
+
+                                <option value="Retorno">
+                                    Retorno
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="status-caso">
+                                Status
+                            </label>
+
+                            <select id="status-caso">
+
+                                <option value="Rascunho">
+                                    Rascunho
+                                </option>
+
+                                <option value="Ativo">
+                                    Ativo
+                                </option>
+
+                                <option value="Arquivado">
+                                    Arquivado
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <div class="divisor-etapa"></div>
+
+
+                <!-- =======================================
+                     DADOS DO PACIENTE
+                ======================================== -->
+
+                <section class="secao-formulario-caso">
+
+                    <div class="cabecalho-etapa">
+
+                        <div class="cabecalho-etapa__icone">
+                            PAC
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Dados do paciente
+                            </h3>
+
+                            <p>
+                                Cadastre as características do animal
+                                utilizado neste caso.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="grade-formulario">
+
+                        <div class="grupo-campo">
+
+                            <label for="nome-paciente-caso">
+                                Nome do paciente
+                            </label>
+
+                            <input
+                                id="nome-paciente-caso"
+                                type="text"
+                                placeholder="Ex.: Luna">
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="sexo-paciente-caso">
+                                Sexo
+                            </label>
+
+                            <select id="sexo-paciente-caso">
+
+                                <option value="">
+                                    Selecione
+                                </option>
+
+                                <option value="Fêmea">
+                                    Fêmea
+                                </option>
+
+                                <option value="Macho">
+                                    Macho
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="idade-paciente-caso">
+                                Idade
+                            </label>
+
+                            <input
+                                id="idade-paciente-caso"
+                                type="text"
+                                placeholder="Ex.: 8 anos">
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="raca-paciente-caso">
+                                Raça
+                            </label>
+
+                            <input
+                                id="raca-paciente-caso"
+                                type="text"
+                                placeholder="Ex.: SRD">
+
+                        </div>
+
+                        <div class="grupo-campo">
+
+                            <label for="peso-paciente-caso">
+                                Peso
+                            </label>
+
+                            <input
+                                id="peso-paciente-caso"
+                                type="text"
+                                placeholder="Ex.: 18,5 kg">
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <div class="divisor-etapa"></div>
+
+
+                <!-- =======================================
+                     TUTOR E HISTÓRIA CLÍNICA
+                ======================================== -->
+
+                <section class="secao-formulario-caso">
+
+                    <div class="cabecalho-etapa">
+
+                        <div class="cabecalho-etapa__icone">
+                            HIS
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Tutor e história clínica
+                            </h3>
+
+                            <p>
+                                Registre as informações apresentadas
+                                no início do atendimento.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="grade-formulario">
+
+                        <div class="grupo-campo">
+
+                            <label for="nome-tutor-caso">
+                                Nome do tutor
+                            </label>
+
+                            <input
+                                id="nome-tutor-caso"
+                                type="text"
+                                placeholder="Ex.: Mariana">
+
+                        </div>
+
+                        <div class="grupo-campo grupo-campo--inteiro">
+
+                            <label for="queixa-principal-caso">
+                                Queixa principal
+                            </label>
+
+                            <textarea
+                                id="queixa-principal-caso"
+                                rows="3"
+                                placeholder="Ex.: tutor relata apatia, falta de apetite e secreção vaginal."></textarea>
+
+                        </div>
+
+                        <div class="grupo-campo grupo-campo--inteiro">
+
+                            <label for="historia-clinica-caso">
+                                História clínica
+                            </label>
+
+                            <textarea
+                                id="historia-clinica-caso"
+                                rows="6"
+                                placeholder="Descreva como os sinais começaram, o tempo de evolução, tratamentos anteriores e outras informações relevantes."></textarea>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </form>
+
+        </div>
+
+
+        <!-- ===============================================
+             RODAPÉ DO MODAL
+        ================================================ -->
+
+        <footer class="rodape-modal">
+
+            <button
+                id="botao-cancelar-caso"
+                class="botao-secundario"
+                type="button">
+
+                Cancelar
+
+            </button>
+
+            <button
+                id="botao-salvar-caso"
+                class="botao-primario"
+                type="button">
+
+                Salvar Caso
+
+            </button>
+
+        </footer>
+
+    </div>
+
+</div>
+
+
+
+                <!-- =====================================================
+             MODAL - DOENÇA
+        ====================================================== -->
+
+        <div id="modal-doenca" class="modal-admin">
+            <div class="janela-modal modal-grande">
+
+                <header class="cabecalho-modal">
+                    <div>
+                        <span class="subtitulo-painel">BANCO DE DOENÇAS</span>
+                        <h2 id="titulo-modal-doenca">Nova Doença</h2>
+                    </div>
+
+                    <button
+                        id="fechar-modal-doenca"
+                        class="botao-icone"
+                        type="button"
+                        aria-label="Fechar modal"
+                    >
+                        ✕
+                    </button>
+                </header>
+
+                <nav class="abas-modal" id="abas-doenca">
+
+                    <button
+                        class="aba ativa"
+                        type="button"
+                        data-etapa="informacoes">
+                        <span class="aba__estado">1</span>
+                        Informações
+                    </button>
+                
+                    <button
+                        class="aba"
+                        type="button"
+                        data-etapa="etiologia">
+                        <span class="aba__estado">2</span>
+                        Etiologia
+                    </button>
+                
+                    <button
+                        class="aba"
+                        type="button"
+                        data-etapa="especies">
+                        <span class="aba__estado">3</span>
+                        Espécies
+                    </button>
+                
+                    <button
+                        class="aba"
+                        type="button"
+                        data-etapa="sistemas">
+                        <span class="aba__estado">4</span>
+                        Sistemas
+                    </button>
+                
+                    <button
+                        class="aba"
+                        type="button"
+                        data-etapa="sinais">
+                        <span class="aba__estado">5</span>
+                        Sinais Clínicos
+                    </button>
+                
+                    <button
+                        class="aba"
+                        type="button"
+                        data-etapa="exames">
+                        <span class="aba__estado">6</span>
+                        Exames
+                    </button>
+                
+                    <button
+                        class="aba"
+                        type="button"
+                        data-etapa="tratamento">
+                        <span class="aba__estado">7</span>
+                        Tratamento 
+                        e Prognóstico
+                    </button>
+
+                    <button 
+                        class= "aba"
+                        type= "button"
+                        data-etapa= "simulacao">
+
+                        <span>8</span>
+                        Simulação Clínica
+
+                    </button>
+                
+                
+                    <button
+                        class="aba"
+                        type="button"
+                        data-etapa="referencias">
+                        <span class="aba__estado">9</span>
+                        Referências
+                    </button>
+                
+                    <button
+                        class="aba"
+                        type="button"
+                        data-etapa="imagens">
+                        <span class="aba__estado">10</span>
+                        Imagens
+                    </button>
+                
+                </nav>
+
+                <div class="conteudo-modal">
+                    <form id="formulario-doenca" novalidate>
+
+                        <section class="pagina-modal ativa" data-pagina="informacoes">
+                            <div class="grade-formulario">
+                                <div class="campo">
+                                    <label for="nome-doenca">Nome da doença *</label>
+                                    <input id="nome-doenca" type="text" placeholder="Ex.: Piometra">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="nome-cientifico-doenca">Nome científico</label>
+                                    <input id="nome-cientifico-doenca" type="text" placeholder="Opcional">
+                                </div>
+
+                                <div class="campo">
+                                    <label for="categoria-doenca">Categoria</label>
+                                    <select id="categoria-doenca">
+                                        <option value="">Selecione</option>
+                                        <option value="Infecciosa">Infecciosa</option>
+                                        <option value="Parasitária">Parasitária</option>
+                                        <option value="Inflamatória">Inflamatória</option>
+                                        <option value="Degenerativa">Degenerativa</option>
+                                        <option value="Neoplásica">Neoplásica</option>
+                                        <option value="Congênita">Congênita</option>
+                                        <option value="Metabólica">Metabólica</option>
+                                        <option value="Outra">Outra</option>
+                                    </select>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="dificuldade-doenca">Dificuldade</label>
+                                    <select id="dificuldade-doenca">
+                                        <option value="Fácil">Fácil</option>
+                                        <option value="Intermediária">Intermediária</option>
+                                        <option value="Difícil">Difícil</option>
+                                    </select>
+                                </div>
+
+                                <div class="campo">
+                                    <label for="status-doenca">Status</label>
+                                    <select id="status-doenca">
+                                        <option value="Ativa">Ativa</option>
+                                        <option value="Rascunho">Rascunho</option>
+                                        <option value="Arquivada">Arquivada</option>
+                                    </select>
+                                </div>
+
+                                <div class="campo largura-total">
+                                    <label for="resumo-doenca">Resumo</label>
+                                    <textarea id="resumo-doenca" rows="5" placeholder="Resumo curto da doença"></textarea>
+                                </div>
+                            </div>
+                        </section>
+
+
+<!--PAGINA ABA ETIOLOGIA-->
+                        <section
+    class="pagina-modal"
+    data-pagina="etiologia">
+
+    <div class="cabecalho-etapa">
+        <div class="cabecalho-etapa__icone">🧬</div>
+
+        <div>
+            <h3>Etiologia da doença</h3>
+            <p>
+                Registre a origem, os agentes envolvidos e os
+                fatores que favorecem o desenvolvimento da doença.
+            </p>
+        </div>
+    </div>
+
+    <div class="grade-formulario">
+
+        <div class="grupo-campo">
+            <label for="tipo-causa-doenca">
+                Tipo de causa
+            </label>
+
+            <select id="tipo-causa-doenca">
+                <option value="">Selecione</option>
+                <option value="Bacteriana">🦠 Bacteriana</option>
+                <option value="Viral">🧫 Viral</option>
+                <option value="Fúngica">🍄 Fúngica</option>
+                <option value="Parasitária">🪱 Parasitária</option>
+                <option value="Genética">🧬 Genética</option>
+                <option value="Congênita">🧬 Congênita</option>
+                <option value="Traumática">⚠️ Traumática</option>
+                <option value="Metabólica">🧪 Metabólica</option>
+                <option value="Imunológica">🛡️ Imunológica</option>
+                <option value="Neoplásica">🔬 Neoplásica</option>
+                <option value="Tóxica">☠️ Tóxica</option>
+                <option value="Nutricional">🥣 Nutricional</option>
+                <option value="Degenerativa">📉 Degenerativa</option>
+                <option value="Idiopática">❔ Idiopática</option>
+                <option value="Multifatorial">🔗 Multifatorial</option>
+                <option value="Outra">➕ Outra</option>
+            </select>
+        </div>
+
+        <div class="grupo-campo">
+            <label for="agente-etiologico-doenca">
+                Agente etiológico
+            </label>
+
+            <input
+                id="agente-etiologico-doenca"
+                type="text"
+                placeholder="Ex.: Escherichia coli">
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+            <label for="transmissao-doenca">
+                Forma de transmissão
+            </label>
+
+            <input
+                id="transmissao-doenca"
+                type="text"
+                placeholder="Ex.: contato direto, vetor, ingestão ou não transmissível">
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+            <label for="fatores-predisponentes-doenca">
+                Fatores predisponentes
+            </label>
+
+            <textarea
+                id="fatores-predisponentes-doenca"
+                rows="3"
+                placeholder="Ex.: idade avançada, imunossupressão, predisposição racial..."></textarea>
+
+            <small>
+                Informe condições que aumentam o risco de desenvolvimento da doença.
+            </small>
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+            <label for="etiologia-detalhada-doenca">
+                Descrição da etiologia
+            </label>
+
+            <textarea
+                id="etiologia-detalhada-doenca"
+                rows="5"
+                placeholder="Explique como a doença se desenvolve e quais fatores participam do processo..."></textarea>
+        </div>
+
+    </div>
+
+</section>
+
+<!--PAGINA ABA ESPECIE-->
+
+<section
+class="pagina-modal"
+data-pagina="especies">
+
+<div class="cabecalho-etapa">
+    <div class="cabecalho-etapa__icone">ESP</div>
+
+    <div>
+        <h3>Espécies compatíveis</h3>
+
+        <p>
+            Selecione todas as espécies em que esta doença
+            pode ocorrer.
+        </p>
+    </div>
+</div>
+
+<div class="secao-especies">
+
+    <h4>Espécies acometidas</h4>
+
+    <div class="grade-especies">
+
+        <label class="cartao-especie especie-canina">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Canina">
+
+            <span class="icone-especie">CA</span>
+            <span class="nome-especie">Canina</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-felina">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Felina">
+
+            <span class="icone-especie">FE</span>
+            <span class="nome-especie">Felina</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-equina">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Equina">
+
+            <span class="icone-especie">EQ</span>
+            <span class="nome-especie">Equina</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-bovina">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Bovina">
+
+            <span class="icone-especie">BO</span>
+            <span class="nome-especie">Bovina</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-suina">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Suína">
+
+            <span class="icone-especie">SU</span>
+            <span class="nome-especie">Suína</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-ovina">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Ovina">
+
+            <span class="icone-especie">OV</span>
+            <span class="nome-especie">Ovina</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-caprina">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Caprina">
+
+            <span class="icone-especie">CP</span>
+            <span class="nome-especie">Caprina</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-aves">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Aves">
+
+            <span class="icone-especie">AV</span>
+            <span class="nome-especie">Aves</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-repteis">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Répteis">
+
+            <span class="icone-especie">RP</span>
+            <span class="nome-especie">Répteis</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-lagomorfos">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Lagomorfos">
+
+            <span class="icone-especie">LG</span>
+            <span class="nome-especie">Lagomorfos</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-silvestres">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Silvestres">
+
+            <span class="icone-especie">SV</span>
+            <span class="nome-especie">Silvestres</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+        <label class="cartao-especie especie-exoticos">
+            <input
+                type="checkbox"
+                name="especies-doenca"
+                value="Exóticos">
+
+            <span class="icone-especie">EX</span>
+            <span class="nome-especie">Exóticos</span>
+            <span class="check-especie">✓</span>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="divisor-etapa"></div>
+
+<div class="grade-classificacao-especies">
+
+    <div class="bloco-classificacao">
+
+        <h4>Sexo acometido</h4>
+
+        <div class="opcoes-selecao">
+
+            <label class="opcao-selecao">
+                <input
+                    type="radio"
+                    name="sexo-acometido"
+                    value="Ambos"
+                    checked>
+
+                <span>Ambos</span>
+            </label>
+
+            <label class="opcao-selecao">
+                <input
+                    type="radio"
+                    name="sexo-acometido"
+                    value="Machos">
+
+                <span>Machos</span>
+            </label>
+
+            <label class="opcao-selecao">
+                <input
+                    type="radio"
+                    name="sexo-acometido"
+                    value="Fêmeas">
+
+                <span>Fêmeas</span>
+            </label>
+
+        </div>
+
+    </div>
+
+    <div class="bloco-classificacao">
+
+        <h4>Faixa etária predominante</h4>
+
+        <div class="opcoes-selecao">
+
+            <label class="opcao-selecao">
+                <input
+                    type="checkbox"
+                    name="faixa-etaria-doenca"
+                    value="Filhotes">
+
+                <span>Filhotes</span>
+            </label>
+
+            <label class="opcao-selecao">
+                <input
+                    type="checkbox"
+                    name="faixa-etaria-doenca"
+                    value="Jovens">
+
+                <span>Jovens</span>
+            </label>
+
+            <label class="opcao-selecao">
+                <input
+                    type="checkbox"
+                    name="faixa-etaria-doenca"
+                    value="Adultos">
+
+                <span>Adultos</span>
+            </label>
+
+            <label class="opcao-selecao">
+                <input
+                    type="checkbox"
+                    name="faixa-etaria-doenca"
+                    value="Idosos">
+
+                <span>Idosos</span>
+            </label>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="grupo-campo grupo-campo--inteiro campo-observacao-especies">
+
+    <label for="observacoes-especies-doenca">Observações sobre as espécies</label>
+
+    <textarea
+        id="observacoes-especies-doenca"
+        rows="3"
+        placeholder="Ex.: maior incidência em cadelas não castradas acima de 6 anos."></textarea>
+
+</div>
+
+</section>
+
+
+<!--PAGINA ABA SISTEMAS -->
+
+<section
+    class="pagina-modal"
+    data-pagina="sistemas">
+
+<div class="cabecalho-etapa">
+
+    <div class="cabecalho-etapa__icone">
+        SIS
+    </div>
+
+    <div>
+
+        <h3>Sistemas acometidos</h3>
+
+        <p>
+            Selecione um ou mais sistemas afetados pela doença.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="secao-sistemas">
+
+    <div class="grade-sistemas">
+
+        <label class="cartao-sistema sistema-cardiovascular">
+            <input type="checkbox" name="sistemas-doenca" value="Cardiovascular">
+            <span class="icone-sistema">CV</span>
+            <span class="nome-sistema">Cardiovascular</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-respiratorio">
+            <input type="checkbox" name="sistemas-doenca" value="Respiratório">
+            <span class="icone-sistema">RP</span>
+            <span class="nome-sistema">Respiratório</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-digestorio">
+            <input type="checkbox" name="sistemas-doenca" value="Digestório">
+            <span class="icone-sistema">DG</span>
+            <span class="nome-sistema">Digestório</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-urinario">
+            <input type="checkbox" name="sistemas-doenca" value="Urinário">
+            <span class="icone-sistema">UR</span>
+            <span class="nome-sistema">Urinário</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-nervoso">
+            <input type="checkbox" name="sistemas-doenca" value="Nervoso">
+            <span class="icone-sistema">NV</span>
+            <span class="nome-sistema">Nervoso</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-musculoesqueletico">
+            <input type="checkbox" name="sistemas-doenca" value="Musculoesquelético">
+            <span class="icone-sistema">MS</span>
+            <span class="nome-sistema">Musculoesquelético</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-hematologico">
+            <input type="checkbox" name="sistemas-doenca" value="Hematológico">
+            <span class="icone-sistema">HM</span>
+            <span class="nome-sistema">Hematológico</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-imunologico">
+            <input type="checkbox" name="sistemas-doenca" value="Imunológico">
+            <span class="icone-sistema">IM</span>
+            <span class="nome-sistema">Imunológico</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-oftalmico">
+            <input type="checkbox" name="sistemas-doenca" value="Oftálmico">
+            <span class="icone-sistema">OF</span>
+            <span class="nome-sistema">Oftálmico</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-otologico">
+            <input type="checkbox" name="sistemas-doenca" value="Otológico">
+            <span class="icone-sistema">OT</span>
+            <span class="nome-sistema">Otológico</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-reprodutor">
+            <input type="checkbox" name="sistemas-doenca" value="Reprodutor">
+            <span class="icone-sistema">RE</span>
+            <span class="nome-sistema">Reprodutor</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-endocrino">
+            <input type="checkbox" name="sistemas-doenca" value="Endócrino">
+            <span class="icone-sistema">EN</span>
+            <span class="nome-sistema">Endócrino</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+        <label class="cartao-sistema sistema-multissistemico">
+            <input type="checkbox" name="sistemas-doenca" value="Multissistêmico">
+            <span class="icone-sistema">ML</span>
+            <span class="nome-sistema">Multissistêmico</span>
+            <span class="check-sistema">✓</span>
+        </label>
+
+    </div>
+
+</div>
+
+<div class="grupo-campo grupo-campo--inteiro">
+
+    <label for="observacoes-sistemas">
+        Observações sobre os sistemas acometidos
+    </label>
+
+    <textarea
+        id="observacoes-sistemas"
+        rows="3"
+        placeholder="Ex.: inicia no sistema respiratório e evolui para o sistema nervoso."></textarea>
+
+</div>
+
+</section>
+
+<!--PAGINA ABA SINAIS CLINICOS-->
+<section
+class="pagina-modal"
+data-pagina="sinais">
+
+<div class="cabecalho-etapa">
+
+    <div class="cabecalho-etapa__icone">
+        SIN
+    </div>
+
+    <div>
+
+        <h3>Sinais clínicos</h3>
+
+        <p>
+            Descreva as manifestações clínicas e a evolução da doença.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="grade-formulario">
+
+    <div class="grupo-campo">
+
+        <label for="inicio-sinais">
+            Início dos sinais
+        </label>
+
+        <select id="inicio-sinais">
+
+            <option value="">Selecione</option>
+
+            <option>Súbito</option>
+            <option>Agudo</option>
+            <option>Subagudo</option>
+            <option>Crônico</option>
+            <option>Variável</option>
+
+        </select>
+
+    </div>
+
+    <div class="grupo-campo">
+
+        <label for="evolucao-clinica">
+            Evolução clínica
+        </label>
+
+        <select id="evolucao-clinica">
+
+            <option value="">Selecione</option>
+
+            <option>Progressiva</option>
+            <option>Estável</option>
+            <option>Intermitente</option>
+            <option>Recorrente</option>
+            <option>Variável</option>
+
+        </select>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="sinais-principais">
+            Sinais clínicos principais
+        </label>
+
+        <textarea
+            id="sinais-principais"
+            rows="5"
+            placeholder="Ex.: apatia, febre, secreção vaginal, anorexia e aumento abdominal."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="sinais-secundarios">
+            Sinais clínicos secundários
+        </label>
+
+        <textarea
+            id="sinais-secundarios"
+            rows="4"
+            placeholder="Sinais menos frequentes ou que aparecem em alguns pacientes."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="sinais-emergencia">
+            Sinais de alerta / emergência
+        </label>
+
+        <textarea
+            id="sinais-emergencia"
+            rows="3"
+            placeholder="Ex.: choque séptico, dispneia intensa, convulsões..."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="observacoes-sinais">
+            Observações clínicas
+        </label>
+
+        <textarea
+            id="observacoes-sinais"
+            rows="3"
+            placeholder="Informações adicionais importantes sobre a apresentação clínica."></textarea>
+
+    </div>
+
+</div>
+
+</section>
+
+<section
+class="pagina-modal"
+data-pagina="exames">
+
+<div class="cabecalho-etapa">
+
+    <div class="cabecalho-etapa__icone">
+        EXA
+    </div>
+
+    <div>
+
+        <h3>Exames e diagnóstico</h3>
+
+        <p>
+            Registre os exames indicados, os achados esperados
+            e os critérios utilizados para confirmar a doença.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="grade-formulario">
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="exames-iniciais">
+            Exames iniciais recomendados
+        </label>
+
+        <textarea
+            id="exames-iniciais"
+            rows="4"
+            placeholder="Ex.: hemograma, perfil bioquímico, urinálise e exame físico completo."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="exames-complementares">
+            Exames complementares
+        </label>
+
+        <textarea
+            id="exames-complementares"
+            rows="4"
+            placeholder="Ex.: ultrassonografia, radiografia, citologia, cultura, sorologia ou testes moleculares."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="achados-laboratoriais">
+            Achados laboratoriais esperados
+        </label>
+
+        <textarea
+            id="achados-laboratoriais"
+            rows="4"
+            placeholder="Descreva alterações esperadas no hemograma, bioquímica, urinálise e demais exames laboratoriais."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="achados-imagem">
+            Achados de imagem esperados
+        </label>
+
+        <textarea
+            id="achados-imagem"
+            rows="4"
+            placeholder="Descreva alterações esperadas em radiografia, ultrassonografia, tomografia ou ressonância."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="exame-confirmatorio">
+            Exame ou critério confirmatório
+        </label>
+
+        <textarea
+            id="exame-confirmatorio"
+            rows="3"
+            placeholder="Informe o exame padrão-ouro ou os critérios necessários para confirmar o diagnóstico."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="diagnosticos-diferenciais">
+            Diagnósticos diferenciais
+        </label>
+
+        <textarea
+            id="diagnosticos-diferenciais"
+            rows="4"
+            placeholder="Liste doenças ou condições que podem apresentar sinais semelhantes."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="observacoes-exames">
+            Observações sobre os exames
+        </label>
+
+        <textarea
+            id="observacoes-exames"
+            rows="3"
+            placeholder="Inclua limitações, cuidados na interpretação, falsos positivos ou falsos negativos."></textarea>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<section
+class="pagina-modal"
+data-pagina="tratamento">
+
+<div class="cabecalho-etapa">
+
+    <div class="cabecalho-etapa__icone">
+        TRP
+    </div>
+
+    <div>
+
+        <h3>Tratamento e prognóstico</h3>
+
+        <p>
+            Registre a conduta terapêutica, os cuidados necessários
+            e a expectativa de evolução da doença.
+        </p>
+
+    </div>
+
+</div>
+
+<!-- ===================== TRATAMENTO ===================== -->
+
+<div class="subsecao-formulario">
+
+    <div class="titulo-subsecao">
+
+        <span class="titulo-subsecao__icone">
+            TR
+        </span>
+
+        <div>
+
+            <h4>Tratamento</h4>
+
+            <p>
+                Condutas clínicas, medicamentos e procedimentos.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="grade-formulario">
+
+        <div class="grupo-campo grupo-campo--inteiro">
+
+            <label for="conduta-inicial">
+                Conduta inicial
+            </label>
+
+            <textarea
+                id="conduta-inicial"
+                rows="3"
+                placeholder="Ex.: estabilização, internação, isolamento ou medidas imediatas."></textarea>
+
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+
+            <label for="tratamento-medicamentoso">
+                Tratamento medicamentoso
+            </label>
+
+            <textarea
+                id="tratamento-medicamentoso"
+                rows="4"
+                placeholder="Informe medicamentos, classes terapêuticas, protocolos ou princípios ativos."></textarea>
+
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+
+            <label for="procedimentos">
+                Procedimentos clínicos ou cirúrgicos
+            </label>
+
+            <textarea
+                id="procedimentos"
+                rows="3"
+                placeholder="Ex.: cirurgia, drenagem, curativos, oxigenoterapia ou outros procedimentos."></textarea>
+
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+
+            <label for="tratamento-suporte">
+                Cuidados de suporte
+            </label>
+
+            <textarea
+                id="tratamento-suporte"
+                rows="3"
+                placeholder="Ex.: fluidoterapia, analgesia, suporte nutricional e monitoramento."></textarea>
+
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+
+            <label for="contraindicacoes">
+                Contraindicações e cuidados
+            </label>
+
+            <textarea
+                id="contraindicacoes"
+                rows="3"
+                placeholder="Informe contraindicações, riscos ou cuidados importantes durante o tratamento."></textarea>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="divisor-etapa"></div>
+
+<!-- ===================== PROGNÓSTICO ===================== -->
+
+<div class="subsecao-formulario">
+
+    <div class="titulo-subsecao">
+
+        <span class="titulo-subsecao__icone">
+            PG
+        </span>
+
+        <div>
+
+            <h4>Prognóstico</h4>
+
+            <p>
+                Expectativa de recuperação, evolução e possíveis complicações.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="grade-formulario">
+
+        <div class="grupo-campo">
+
+            <label for="prognostico-geral">
+                Prognóstico geral
+            </label>
+
+            <select id="prognostico-geral">
+
+                <option value="">Selecione</option>
+
+                <option>Excelente</option>
+                <option>Favorável</option>
+                <option>Reservado</option>
+                <option>Desfavorável</option>
+                <option>Grave</option>
+                <option>Variável</option>
+
+            </select>
+
+        </div>
+
+        <div class="grupo-campo">
+
+            <label for="risco-recorrencia">
+                Risco de recorrência
+            </label>
+
+            <select id="risco-recorrencia">
+
+                <option value="">Selecione</option>
+
+                <option>Baixo</option>
+                <option>Moderado</option>
+                <option>Alto</option>
+                <option>Não aplicável</option>
+
+            </select>
+
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+
+            <label for="fatores-prognostico">
+                Fatores que influenciam o prognóstico
+            </label>
+
+            <textarea
+                id="fatores-prognostico"
+                rows="3"
+                placeholder="Ex.: idade, tempo de evolução, gravidade, comorbidades e resposta ao tratamento."></textarea>
+
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+
+            <label for="complicacoes">
+                Possíveis complicações
+            </label>
+
+            <textarea
+                id="complicacoes"
+                rows="3"
+                placeholder="Liste complicações que podem ocorrer durante a evolução da doença."></textarea>
+
+        </div>
+
+        <div class="grupo-campo grupo-campo--inteiro">
+
+            <label for="acompanhamento">
+                Acompanhamento recomendado
+            </label>
+
+            <textarea
+                id="acompanhamento"
+                rows="3"
+                placeholder="Descreva retornos, exames de controle e monitoramento do paciente."></textarea>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!--PAGINA ABA SINAIS REFERENCIAS-->
+
+</section>
+
+<section
+class="pagina-modal"
+data-pagina="referencias">
+
+<div class="cabecalho-etapa">
+
+    <div class="cabecalho-etapa__icone">
+        REF
+    </div>
+
+    <div>
+
+        <h3>Referências</h3>
+
+        <p>
+            Registre as fontes utilizadas para elaboração e validação desta doença.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="grade-formulario">
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="referencias-bibliograficas">
+            Referências bibliográficas
+        </label>
+
+        <textarea
+            id="referencias-bibliograficas"
+            rows="8"
+            placeholder="Ex.: livros, artigos científicos, consensos, manuais veterinários e outras fontes utilizadas."></textarea>
+
+    </div>
+
+    <div class="grupo-campo grupo-campo--inteiro">
+
+        <label for="observacoes-referencias">
+            Observações
+        </label>
+
+        <textarea
+            id="observacoes-referencias"
+            rows="4"
+            placeholder="Anotações adicionais sobre as referências, atualizações futuras ou observações importantes."></textarea>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!--PAGINA ABA SINAIS IMAGENS-->
+<section
+class="pagina-modal"
+data-pagina="imagens">
+
+<div class="cabecalho-etapa">
+
+    <div class="cabecalho-etapa__icone">
+        IMG
+    </div>
+
+    <div>
+
+        <h3>Imagens</h3>
+
+        <p>
+            Adicione imagens relacionadas à doença para enriquecer os estudos e os casos clínicos.
+        </p>
+
+    </div>
+
+</div>
+
+<div class="area-upload-imagens">
+
+    <label
+        for="imagens-doenca"
+        class="campo-upload-imagens">
+
+        <span class="upload-icone">
+            📷
+        </span>
+
+        <strong>
+            Selecionar imagens
+        </strong>
+
+        <small>
+            Clique aqui ou arraste arquivos para adicionar.
+        </small>
+
+        <input
+            type="file"
+            id="imagens-doenca"
+            accept="image/*"
+            multiple>
+
+    </label>
+
+</div>
+
+<div
+    id="galeria-imagens-doenca"
+    class="galeria-imagens">
+
+    <div class="mensagem-sem-imagens">
+
+        Nenhuma imagem adicionada.
+
+    </div>
+
+</div>
+
+<div class="grupo-campo grupo-campo--inteiro">
+
+    <label for="descricao-imagens">
+
+        Observações sobre as imagens
+
+    </label>
+
+    <textarea
+        id="descricao-imagens"
+        rows="4"
+        placeholder="Ex.: radiografia em projeção lateral demonstrando aumento uterino; imagem autorizada para fins educacionais."></textarea>
+
+</div>
+
+</section>
+
+                    </form>
+                </div>
+
+                <footer class="rodape-modal">
+                    <button id="botao-cancelar-doenca" class="botao-secundario" type="button">
+                        Cancelar
+                    </button>
+
+                    <button id="botao-salvar-doenca" class="botao-primario" type="button">
+                        Salvar Doença
+                    </button>
+                </footer>
+
+            </div>
+        </div>
+
+                <!-- =====================================================
+             FIM DO CONTEÚDO PRINCIPAL
+        ====================================================== -->
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     JAVASCRIPT DO PAINEL ADMINISTRATIVO
+========================================================== -->
+
+<div
+    id="area-notificacoes"
+    class="area-notificacoes"
+    aria-live="polite"
+    aria-atomic="true">
+</div>
+
+<script src="dadosAdmin.js"></script>
+<script src="admin.js"></script>
+
+</body>
+
+</html>

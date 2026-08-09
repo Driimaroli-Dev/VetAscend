@@ -43,163 +43,29 @@ document.querySelector(".texto-nivel");
 const botaoAbrirAgenda =
 document.querySelector(".botao-abrir-agenda");
 
-const botaoAgendaSuperior =
-document.querySelector(".botao-abrir-agenda-superior");
+let botaoNotificacoes;
 
-const modalAgenda =
-document.querySelector(".modal-agenda");
+criarBarraSuperior ({
+    aoClicarAjuda() {
+        modalAjuda.style.display="flex";
+    }
+});
 
-const botaoFecharAgenda =
-document.querySelector(".botao-fechar-agenda");
-
-const botaoAjuda =
-document.querySelector(".botao-ajuda");
-
-const modalAjuda =
-document.querySelector(".modal-ajuda");
-
-const botaoFecharAjuda =
-document.querySelector(".botao-fechar-ajuda");
-
-const paginaPrincipalAjuda =
-document.querySelector(".pagina-principal-ajuda");
-
-const paginaNavegacaoAjuda =
-document.querySelector(".pagina-navegacao-ajuda");
-
-const botoesVoltarAjuda =
-document.querySelectorAll(".botao-voltar-ajuda");
-
-const itensAjuda =
-document.querySelectorAll(".item-ajuda");
-
-const paginasAjuda =
-document.querySelectorAll(".pagina-ajuda");
-
-
+criarBarraNavegacao("recepcao");
 
 let passoTutorial = 0; //guarda em qual passo do tutorial estamos
+ 
 
-let xpAtual = 150;
-let xpNecessario = 500;
-
-
-//tudo sobre o XP
-function atualizarXp () {
-    const porcentagemXp = (xpAtual/xpNecessario)*100;
-
-    barraXp.style.width = porcentagemXp + "%";
-
-    const nivelAtual = Math.floor(xpAtual/xpNecessario)+1;
-
-    textoXp.textContent = xpAtual + "/" + xpNecessario + "XP";
-
-    textoNivel.textContent = "Nível " +nivelAtual;
-}
-
-atualizarXp();
-
-
-//tudo sobre a Data e Hora
-function atualizarDataHora() {
-    const agora = new Date();
-
-    const dia = agora.getDate();
-
-    const meses = [
-        "Jan", "Fev", "Mar", "Abr",
-        "Mai", "Jun", "Jul", "Ago",
-        "Set", "Out", "Nov", "Dez"
-    ];
-
-    const diasSemana = [
-        "Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"
-    ];
-
-    const mes = meses[agora.getMonth()];
-    const diaSemana = diasSemana[agora.getDay()];
-
-    const dataFormatada = "📅" + dia + " " + mes + " • " + diaSemana;
-
-    const horaFormatada = 
-    agora.toLocaleTimeString("pt-BR", {
-        hour:"2-digit",
-        minute:"2-digit"
-    });
-
-    const hora = agora.getHours();
-
-    let periodo;
-
-    if (hora < 12 ) {
-        periodo = "Manhã";
-    } else if (hora < 18) {
-        periodo = "Tarde";
-    } else {
-        periodo = "Noite";
-    }
-
-    diaData.textContent = dataFormatada;
-    horaAtual.textContent = "⏰ " + horaFormatada + " • " + periodo;
-
-}
-
-atualizarDataHora();
-
-
-// tudo sobre a AJUDA 
-function abrirAjuda () {
-    modalAjuda.style.display="flex";
-}
-
-botaoAjuda.addEventListener("click", abrirAjuda);
-
-botaoFecharAjuda.addEventListener("click", function 
-() {
-    modalAjuda.style.display = "none";
-});
-
-modalAjuda.addEventListener("click", function (event) {
-    if (event.target === modalAjuda) {
-        modalAjuda.style.display = "none";
-    }
-});
-
-//troca de página da central de ajuda
-itensAjuda.forEach(function (item) { 
-    item.addEventListener("click", function () {
-
-        const assuntoAjuda = item.dataset.ajuda;
-
-        const paginaEscolhida = document.querySelector(
-            `[data-pagina-ajuda="${assuntoAjuda}"]`
-        );
-
-        if (paginaEscolhida) {
-            paginaPrincipalAjuda.style.display="none";
-            paginaEscolhida.style.display="block";
-        }    
-    });
-});
-
-botoesVoltarAjuda.forEach(function (botao) {
-    botao.addEventListener("click", function () {
-
-
-        paginasAjuda.forEach(function (pagina) {
-            pagina.style.display="none";
-
-        });    
-        paginaPrincipalAjuda.style.display="block";
-    });
-});
-
-
-
-// tudo sobre a CECÍLIA 
+// ======================================================================================================================================
+// CECÍLIA
+// ====================================================================================================================================== 
 if (nomeUsuario) {
+    if (textoCecilia) {
     textoCecilia.textContent = "Oii, "+nomeUsuario+ "! Que bom ter você por aqui.";
+    }
+    if (nomeJogador) {
     nomeJogador.textContent = nomeUsuario;
+    }
 }
 
 if (tutorialRecepcaoConcluido !=="sim") {
@@ -304,23 +170,10 @@ botaoContinuar.addEventListener("click",function () {
 });
 
 
-//tudo sobre o ABRIR AGENDA
-function abrirAgenda() {
-    modalAgenda.style.display = "flex";
+// ===========================================================================================================================
+//                   ABRIR AGENDA DA CECILIA
+// ===========================================================================================================================
 
-}
-
+if (botaoAbrirAgenda) {
 botaoAbrirAgenda.addEventListener("click", abrirAgenda);
-
-botaoAgendaSuperior.addEventListener("click", abrirAgenda);
-
-
-botaoFecharAgenda.addEventListener("click", function () {
-    modalAgenda.style.display = "none";
-});
-
-modalAgenda.addEventListener("click",function (event) {
-    if (event.target === modalAgenda) {  //identifica o elemnto que recebeu o clique
-        modalAgenda.style.display = "none";  //se clicar fora da tela da agenda ele fecha tbm
-    }
-});
+}
